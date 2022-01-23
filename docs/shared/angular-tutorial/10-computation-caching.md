@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 10: Computation Caching
+# Angular Nx 教程 - 第十步:计算缓存
 
 Nx has built-in computation caching, which helps drastically improve the performance of the commands.
 

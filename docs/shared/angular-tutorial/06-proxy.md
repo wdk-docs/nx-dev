@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 6: Proxy
+# Angular Nx 教程-第六步:代理
 
 You passed `--frontendProject=todos` when creating the node application. What did that argument do?
 

@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 5: Add Node Application Implementing an API
+# Angular Nx 教程-第 5 步:添加实现 API 的节点应用
 
 The requests fail because the API has not been created yet. Using Nx you can develop node applications next to your Angular applications. You can use same commands to run and test them. You can share code between the backend and the frontend. Use this capability to implement the API service.
 

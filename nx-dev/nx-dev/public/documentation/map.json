@@ -147,62 +147,62 @@
         "id": "react-tutorial",
         "itemList": [
           {
-            "name": "1 - Create Application",
+            "name": "1 - 创建应用程序",
             "id": "01-create-application",
             "file": "shared/react-tutorial/01-create-application"
           },
           {
-            "name": "2 - Add E2E Test",
+            "name": "2 - 添加E2E测试",
             "id": "02-add-e2e-test",
             "file": "shared/react-tutorial/02-add-e2e-test"
           },
           {
-            "name": "3 - Display Todos",
+            "name": "3 - 显示todos",
             "id": "03-display-todos",
             "file": "shared/react-tutorial/03-display-todos"
           },
           {
-            "name": "4 - Connect to API",
+            "name": "4 - 连接到API",
             "id": "04-connect-to-api",
             "file": "shared/react-tutorial/04-connect-to-api"
           },
           {
-            "name": "5 - Add Node Application",
+            "name": "5 - 添加节点应用程序",
             "id": "05-add-node-app",
             "file": "shared/react-tutorial/05-add-node-app"
           },
           {
-            "name": "6 - Proxy Configuration",
+            "name": "6 - 代理配置",
             "id": "06-proxy",
             "file": "shared/react-tutorial/06-proxy"
           },
           {
-            "name": "7 - Share Code",
+            "name": "7 - 共享代码",
             "id": "07-share-code",
             "file": "shared/react-tutorial/07-share-code"
           },
           {
-            "name": "8 - Create Libraries",
+            "name": "8 - 创建库",
             "id": "08-create-libs",
             "file": "shared/react-tutorial/08-create-libs"
           },
           {
-            "name": "9 - Project Graph",
+            "name": "9 - 工程图",
             "id": "09-dep-graph",
             "file": "shared/react-tutorial/09-dep-graph"
           },
           {
-            "name": "10 - Use Computation Caching",
+            "name": "10 - 使用计算缓存",
             "id": "10-computation-caching",
             "file": "shared/react-tutorial/10-computation-caching"
           },
           {
-            "name": "11 - Test Affected Projects",
+            "name": "11 - 影响测试项目",
             "id": "11-test-affected-projects",
             "file": "shared/react-tutorial/11-test-affected-projects"
           },
           {
-            "name": "12 - Summary",
+            "name": "12 - 总结",
             "id": "12-summary",
             "file": "shared/react-tutorial/12-summary"
           }
@@ -213,62 +213,62 @@
         "id": "angular-tutorial",
         "itemList": [
           {
-            "name": "1 - Create Application",
+            "name": "1 - 创建应用程序",
             "id": "01-create-application",
             "file": "shared/angular-tutorial/01-create-application"
           },
           {
-            "name": "2 - Add E2E Test",
+            "name": "2 - 添加E2E测试",
             "id": "02-add-e2e-test",
             "file": "shared/angular-tutorial/02-add-e2e-test"
           },
           {
-            "name": "3 - Display Todos",
+            "name": "3 - 显示 Todos",
             "id": "03-display-todos",
             "file": "shared/angular-tutorial/03-display-todos"
           },
           {
-            "name": "4 - Connect to API",
+            "name": "4 - 连接到API",
             "id": "04-connect-to-api",
             "file": "shared/angular-tutorial/04-connect-to-api"
           },
           {
-            "name": "5 - Add Node Application",
+            "name": "5 - 添加节点应用程序",
             "id": "05-add-node-app",
             "file": "shared/angular-tutorial/05-add-node-app"
           },
           {
-            "name": "6 - Proxy Configuration",
+            "name": "6 - 代理配置",
             "id": "06-proxy",
             "file": "shared/angular-tutorial/06-proxy"
           },
           {
-            "name": "7 - Share Code",
+            "name": "7 - 共享代码",
             "id": "07-share-code",
             "file": "shared/angular-tutorial/07-share-code"
           },
           {
-            "name": "8 - Create Libraries",
+            "name": "8 - 创建库",
             "id": "08-create-libs",
             "file": "shared/angular-tutorial/08-create-libs"
           },
           {
-            "name": "9 - Project Graph",
+            "name": "9 - 工程图",
             "id": "09-dep-graph",
             "file": "shared/angular-tutorial/09-dep-graph"
           },
           {
-            "name": "10 - Use Computation Caching",
+            "name": "10 - 使用计算缓存",
             "id": "10-computation-caching",
             "file": "shared/angular-tutorial/10-computation-caching"
           },
           {
-            "name": "11 - Test Affected Projects",
+            "name": "11 - 影响测试项目",
             "id": "11-test-affected-projects",
             "file": "shared/angular-tutorial/11-test-affected-projects"
           },
           {
-            "name": "12 - Summary",
+            "name": "12 - 总结",
             "id": "12-summary",
             "file": "shared/angular-tutorial/12-summary"
           }
@@ -279,7 +279,7 @@
         "id": "node-tutorial",
         "itemList": [
           {
-            "name": "1 - Create Application",
+            "name": "1 - 创建应用程序",
             "id": "01-create-application",
             "file": "shared/node-tutorial/01-create-application"
           },
@@ -603,12 +603,12 @@
         "itemList": [
           {
             "id": "overview",
-            "name": "Overview",
+            "name": "概述",
             "searchResultsName": "@nrwl/angular Overview",
             "file": "shared/angular-plugin"
           },
           {
-            "name": "application generator",
+            "name": "应用生成器",
             "id": "application",
             "file": "generated/api-angular/generators/application"
           },

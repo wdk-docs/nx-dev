@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 4: Connect to an API
+# Angular Nx 教程-第四步:连接到一个 API
 
 Real-world applications do not live in isolation — they need APIs to talk to. Setup your app to talk to an API.
 

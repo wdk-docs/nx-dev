@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 2: Add E2E Tests
+# Angular Nx 教程-第二步:添加端到端测试
 
 By default, Nx uses [Cypress](/cypress/overview) to run E2E tests.
 

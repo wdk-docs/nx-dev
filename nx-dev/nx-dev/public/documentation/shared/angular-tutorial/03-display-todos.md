@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 3: Display Todos
+# Angular Nx 教程-第三步:显示待办事项
 
 Great! You have a failing E2E test. Now you can make it pass!
 

@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 8: Create Libs
+# Angular Nx 教程-第 8 步:创建库
 
 Libraries are not just a way to share code in Nx. They are also useful for factoring out code into small units with a well-defined public API.
 

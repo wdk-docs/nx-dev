@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 1: Create Application
+# Angular Nx 教程-第一步:创建应用
 
 In this tutorial you use Nx to build a full-stack application out of common libraries using modern technologies like Cypress and Nest.
 

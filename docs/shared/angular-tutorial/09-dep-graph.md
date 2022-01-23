@@ -1,4 +1,4 @@
-# Angular Nx Tutorial - Step 9: Using the Project Graph
+# Angular Nx 教程-第 9 步:使用项目图
 
 An Nx workspace can contain dozens or hundreds of applications and libraries. As a codebase grows, it becomes more difficult to understand how they depend on each other and the implications of making a particular change.
 

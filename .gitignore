@@ -1,0 +1,15 @@
+node_modules
+.idea
+/.vscode
+dist
+/build
+/coverage
+./test
+.DS_Store
+tmp
+*.log
+jest.debug.config.js
+.tool-versions
+/.nx-cache
+/.verdaccio/build/local-registry
+dep-graph/client/src/assets/environment.js

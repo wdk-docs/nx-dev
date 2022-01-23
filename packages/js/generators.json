@@ -1,0 +1,50 @@
+{
+  "name": "nx/js",
+  "version": "0.1",
+  "schematics": {
+    "library": {
+      "factory": "./src/generators/library/library#librarySchematic",
+      "schema": "./src/generators/library/schema.json",
+      "aliases": ["lib"],
+      "x-type": "library",
+      "description": "Create a library"
+    },
+    "application": {
+      "factory": "./src/generators/application/application#applicationSchematic",
+      "schema": "./src/generators/application/schema.json",
+      "aliases": ["app"],
+      "x-type": "application",
+      "description": "Create a application"
+    },
+    "convert-to-swc": {
+      "factory": "./src/generators/convert-to-swc/convert-to-swc#convertToSwcSchematic",
+      "schema": "./src/generators/convert-to-swc/schema.json",
+      "aliases": ["swc"],
+      "x-type": "library",
+      "description": "Convert a tsc library to swc"
+    }
+  },
+  "generators": {
+    "library": {
+      "factory": "./src/generators/library/library#libraryGenerator",
+      "schema": "./src/generators/library/schema.json",
+      "aliases": ["lib"],
+      "x-type": "library",
+      "description": "Create a library"
+    },
+    "application": {
+      "factory": "./src/generators/application/application#applicationGenerator",
+      "schema": "./src/generators/application/schema.json",
+      "aliases": ["app"],
+      "x-type": "application",
+      "description": "Create a application"
+    },
+    "convert-to-swc": {
+      "factory": "./src/generators/convert-to-swc/convert-to-swc#convertToSwcGenerator",
+      "schema": "./src/generators/convert-to-swc/schema.json",
+      "aliases": ["swc"],
+      "x-type": "library",
+      "description": "Convert a tsc library to swc"
+    }
+  }
+}

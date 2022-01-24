@@ -1,4 +1,4 @@
-# Using Executors / Builders
+# 使用执行器和构建器
 
 Executors perform actions on your code. This can include building, linting, testing, serving and many other actions.
 
@@ -7,7 +7,7 @@ There are two main differences between an executor and a shell script or an npm 
 1. Executors encourage a consistent methodology for performing similar actions on unrelated projects. i.e. A developer switching between teams can be confident that `nx build project2` will build `project2` with the default settings, just like `nx build project1` built `project1`.
 2. Nx can leverage this consistency to perform the same executor across multiple projects. i.e. `nx affected --target=test` will run the `test` executor on every project that is affected by the current code change.
 
-## Executor definitions
+## 执行器定义
 
 The executors that are available for each project are defined and configured in the `/workspace.json` file.
 

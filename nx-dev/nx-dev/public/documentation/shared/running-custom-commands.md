@@ -1,4 +1,4 @@
-# Running Custom Commands
+# 运行自定义命令
 
 This recipe will show how to run any terminal command within the nx build-chain.
 

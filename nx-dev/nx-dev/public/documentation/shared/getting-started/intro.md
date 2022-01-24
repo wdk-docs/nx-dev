@@ -1,27 +1,29 @@
-# Intro to Nx
+# Nx 入门
 
-Nx is a smart, fast and extensible build system with first class monorepo support and powerful integrations.
+Nx 是一个智能、快速和可扩展的构建系统，具有一流的 monorepo 支持和强大的集成。
 
-## Philosophy
+## 哲学
 
-Nx has a similar design philosophy to Visual Studio Code. Code is a powerful text editor, and you can be very productive
-with it even if you don't install any extensions. The ecosystem of VSCode's extensions though is what can really level
-up your productivity.
+Nx 的设计理念与 Visual Studio Code 类似。
+代码是一个功能强大的文本编辑器，即使不安装任何扩展，使用它也可以非常高效。
+VSCode 扩展的生态系统能够真正提升你的生产力。
 
-Nx is similar. The core of Nx is generic, simple, and unobtrusive. Nx plugins, although very useful for many projects,
-are completely optional.
+Nx 是相似的。
+Nx 的核心是通用的、简单的、不显眼的。
+Nx 插件虽然对许多项目非常有用，但却是完全可选的。
 
-Most examples on this site use Nx plugins. It's just easier to demonstrate many features Nx offers when Nx generates all
-the boilerplate. However, the vast majority of the features will work the same way in a workspace with no plugins.
+这个网站上的大多数例子都使用 Nx 插件。
+当 Nx 生成所有的样板文件时，演示 Nx 提供的许多特性就更容易了。
+然而，在没有插件的工作空间中，绝大多数特性将以相同的方式工作。
 
 ## Getting Started
 
-- [Using Nx without plugins](/getting-started/nx-core) will help you understand the core of Nx.
-- [Adding Nx to an existing monorepo](/migration/adding-to-monorepo) will show how to add Nx to an existing monorepo.
-- [Mental model](/using-nx/mental-model) is a good starting point for those who like to understand things theoretically first.
+- [使用 Nx 不带插件](/getting-started/nx-core) 将帮助您理解 Nx 的核心。
+- [将 Nx 添加到现有的 monorepo 中](/migration/adding-to-monorepo) 将展示如何将 Nx 添加到一个现有的 monorepo。
+- [心智模型](/using-nx/mental-model) 对于那些喜欢先从理论上理解事物的人来说，这是一个很好的起点。
 
-If you want to use Nx plugins to really level up your productivity, pick one of the following guides:
+如果你想使用 Nx 插件来真正提高你的工作效率，请选择以下指南之一:
 
-- [Nx and TypeScript](/getting-started/nx-and-typescript)
-- [Nx and React](/getting-started/nx-and-react)
-- [Nx and Angular](/getting-started/nx-and-angular)
+- [Nx 和 TypeScript](/getting-started/nx-and-typescript)
+- [Nx 和 React](/getting-started/nx-and-react)
+- [Nx 和 Angular](/getting-started/nx-and-angular)

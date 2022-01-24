@@ -12,9 +12,9 @@ export function Footer({ useDarkBackground }: FooterProps) {
       { name: 'Nrwl', href: 'https://nrwl.io/?utm_source=nx.dev' },
     ],
     resources: [
-      { name: 'Blog', href: 'https://blog.nrwl.io/?utm_source=nx.dev' },
+      { name: '博客', href: 'https://blog.nrwl.io/?utm_source=nx.dev' },
       {
-        name: 'Youtube Channel',
+        name: '油管频道',
         href: 'https://youtube.com/nrwl_io?utm_source=nx.dev',
       },
       {
@@ -35,19 +35,19 @@ export function Footer({ useDarkBackground }: FooterProps) {
         href: 'https://go.nrwl.io/join-slack?utm_source=nx.dev',
       },
       {
-        name: 'Help Us',
+        name: '帮助我们',
         href: 'https://github.com/nrwl/nx/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Acommunity',
       },
     ],
     help: [
-      { name: 'Documentation', href: '/getting-started/intro' },
-      { name: 'Community', href: '/community' },
+      { name: '文档', href: '/getting-started/intro' },
+      { name: '社区', href: '/community' },
       {
         name: 'StackOverflow',
         href: 'https://stackoverflow.com/questions/tagged/nrwl-nx',
       },
       {
-        name: 'Report Issues',
+        name: '报告问题',
         href: 'https://github.com/nrwl/nx/issues?q=is%3Aopen+is%3Aissue',
       },
     ],
@@ -132,7 +132,7 @@ export function Footer({ useDarkBackground }: FooterProps) {
               <title>Nx</title>
               <path d="M11.987 14.138l-3.132 4.923-5.193-8.427-.012 8.822H0V4.544h3.691l5.247 8.833.005-3.998 3.044 4.759zm.601-5.761c.024-.048 0-3.784.008-3.833h-3.65c.002.059-.005 3.776-.003 3.833h3.645zm5.634 4.134a2.061 2.061 0 0 0-1.969 1.336 1.963 1.963 0 0 1 2.343-.739c.396.161.917.422 1.33.283a2.1 2.1 0 0 0-1.704-.88zm3.39 1.061c-.375-.13-.8-.277-1.109-.681-.06-.08-.116-.17-.176-.265a2.143 2.143 0 0 0-.533-.642c-.294-.216-.68-.322-1.18-.322a2.482 2.482 0 0 0-2.294 1.536 2.325 2.325 0 0 1 4.002.388.75.75 0 0 0 .836.334c.493-.105.46.36 1.203.518v-.133c-.003-.446-.246-.55-.75-.733zm2.024 1.266a.723.723 0 0 0 .347-.638c-.01-2.957-2.41-5.487-5.37-5.487a5.364 5.364 0 0 0-4.487 2.418c-.01-.026-1.522-2.39-1.538-2.418H8.943l3.463 5.423-3.379 5.32h3.54l1.54-2.366 1.568 2.366h3.541l-3.21-5.052a.7.7 0 0 1-.084-.32 2.69 2.69 0 0 1 2.69-2.691h.001c1.488 0 1.736.89 2.057 1.308.634.826 1.9.464 1.9 1.541a.707.707 0 0 0 1.066.596zm.35.133c-.173.372-.56.338-.755.639-.176.271.114.412.114.412s.337.156.538-.311c.104-.231.14-.488.103-.74z" />
             </svg>
-            <p className="text-base">Smart, Fast and Extensible Build System</p>
+            <p className="text-base">智能、快速和可扩展的构建系统</p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <Link key={item.name} href={item.href}>
@@ -155,7 +155,7 @@ export function Footer({ useDarkBackground }: FooterProps) {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Resources
+                  资源
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.resources.map((item) => (
@@ -178,7 +178,7 @@ export function Footer({ useDarkBackground }: FooterProps) {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Help
+                  帮助
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.help.map((item) => (
@@ -203,7 +203,7 @@ export function Footer({ useDarkBackground }: FooterProps) {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Community
+                  社区
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.community.map((item) => (
@@ -226,7 +226,7 @@ export function Footer({ useDarkBackground }: FooterProps) {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Solutions
+                  解决方案
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
@@ -252,20 +252,7 @@ export function Footer({ useDarkBackground }: FooterProps) {
         </div>
         <div className="mt-12 border-t border-gray-200 pt-6">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; 2022 made with{' '}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="-mt-0.5 h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                clipRule="evenodd"
-              />
-            </svg>{' '}
-            by{' '}
+            &copy; 2022 由{' '}
             <Link href="https://nrwl.io/?utm_source=nx.dev">
               <a target="_blank" rel="nofollow">
                 <svg
@@ -279,6 +266,20 @@ export function Footer({ useDarkBackground }: FooterProps) {
                 </svg>
               </a>
             </Link>
+            用{' '}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="-mt-0.5 h-5 w-5 inline"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clipRule="evenodd"
+              />
+            </svg>{' '}
+            制作
           </p>
         </div>
       </div>

@@ -1277,94 +1277,94 @@
         "id": "executors",
         "itemList": [
           {
-            "name": "Using Executors / Builders",
+            "name": "使用 运行器/构建器",
             "id": "using-builders",
             "file": "shared/using-executors"
           },
           {
-            "name": "Running Custom Commands",
+            "name": "运行自定义命令",
             "id": "run-commands-builder",
             "file": "shared/running-custom-commands"
           },
           {
-            "name": "Creating Custom Builders",
+            "name": "创建自定义构建器",
             "id": "creating-custom-builders",
             "file": "shared/tools-workspace-builders"
           }
         ]
       },
       {
-        "name": "Generators",
+        "name": "生成器",
         "id": "generators",
         "itemList": [
           {
-            "name": "Using Generators",
+            "name": "使用生成器",
             "id": "using-schematics",
             "file": "shared/generators/using-generators"
           },
           {
-            "name": "Workspace Generators",
+            "name": "工作区生成器",
             "id": "workspace-generators",
             "file": "shared/generators/workspace-generators"
           },
           {
-            "name": "Composing Generators",
+            "name": "组织生成器",
             "id": "composing-generators",
             "file": "shared/generators/composing-generators"
           },
           {
-            "name": "Generator Options",
+            "name": "生成器选项",
             "id": "generator-options",
             "file": "shared/generators/generator-options"
           },
           {
-            "name": "Creating Files",
+            "name": "创建文件",
             "id": "creating-files",
             "file": "shared/generators/creating-files"
           },
           {
-            "name": "Modifying Files",
+            "name": "修改文件",
             "id": "modifying-files",
             "file": "shared/generators/modifying-files"
           }
         ]
       },
       {
-        "name": "Workspace Structure",
+        "name": "工作空间结构",
         "id": "structure",
         "itemList": [
           {
-            "name": "Creating Libraries",
+            "name": "创建库",
             "id": "creating-libraries",
             "file": "shared/workspace/creating-libraries"
           },
           {
-            "name": "Library Types",
+            "name": "库类型",
             "id": "library-types",
             "file": "shared/workspace/library-types"
           },
           {
-            "name": "Grouping Libraries",
+            "name": "分组库",
             "id": "grouping-libraries",
             "file": "shared/workspace/grouping-libraries"
           },
           {
-            "name": "Buildable and Publishable Libraries",
+            "name": "可构建和可发布的库",
             "id": "buildable-and-publishable-libraries",
             "file": "shared/workspace/buildable-and-publishable-libraries"
           },
           {
-            "name": "Using Tags",
+            "name": "使用标签",
             "id": "monorepo-tags",
             "file": "shared/monorepo-tags"
           },
           {
-            "name": "Project Graph",
+            "name": "工程图",
             "id": "dependency-graph",
             "file": "shared/workspace/structure/dependency-graph"
           },
           {
-            "name": "Extending the Project Graph",
+            "name": "扩展项目图",
             "id": "project-graph-plugins",
             "file": "shared/workspace/project-graph-plugins"
           }
@@ -1375,42 +1375,42 @@
         "id": "ci",
         "itemList": [
           {
-            "name": "Setting up Azure Pipelines",
+            "name": "设置Azure管道",
             "id": "monorepo-ci-azure",
             "file": "shared/monorepo-ci-azure"
           },
           {
-            "name": "Setting up CircleCI",
+            "name": "设置CircleCI",
             "id": "monorepo-ci-circle-ci",
             "file": "shared/monorepo-ci-circle-ci"
           },
           {
-            "name": "Setting up GitHub Actions",
+            "name": "设置GitHub动作",
             "id": "monorepo-ci-github-actions",
             "file": "shared/monorepo-ci-github-actions"
           },
           {
-            "name": "Setting up Jenkins",
+            "name": "设置 Jenkins",
             "id": "monorepo-ci-jenkins",
             "file": "shared/monorepo-ci-jenkins"
           },
           {
-            "name": "Setting up GitLab",
+            "name": "设置 GitLab",
             "id": "monorepo-ci-gitlab",
             "file": "shared/monorepo-ci-gitlab"
           },
           {
-            "name": "Distributed CI",
+            "name": "分布式CI",
             "id": "distributed-builds",
             "file": "shared/distributed-builds"
           },
           {
-            "name": "Incremental Builds",
+            "name": "增量构建",
             "id": "incremental-builds",
             "file": "shared/incremental-builds"
           },
           {
-            "name": "Setup incremental builds for Angular applications",
+            "name": "为Angular应用设置增量构建",
             "id": "setup-incremental-builds-angular",
             "file": "shared/guides/setup-incremental-builds-angular"
           }

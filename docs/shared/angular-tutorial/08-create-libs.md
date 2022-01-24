@@ -1,22 +1,24 @@
-# Angular Nx 教程-第 8 步:创建库
+# Angular Nx 教程 - 第 8 步:创建库
 
-Libraries are not just a way to share code in Nx. They are also useful for factoring out code into small units with a well-defined public API.
+库不仅仅是 Nx 中共享代码的一种方式。
+在使用定义良好的公共 API 将代码分解成小单元时，它们也很有用。
 
-## Public API
+## 公共 API
 
-Every library has an `index.ts` file, which defines its public API. Other applications and libraries should only access what the `index.ts` exports. Everything else in the library is private.
+每个库都有一个`index.ts`文件，它定义了它的公共 API。
+其他应用程序和库应该只访问`index.ts`导出的内容。
+图书馆里的其他东西都是私人的。
 
-## UI libraries
+## UI 库
 
-To illustrate how useful libraries can be, create a library of Angular components.
-
-Use the generate to scaffold a new library:
+为了说明库是多么有用，创建一个 Angular 组件库。
+使用 generate 构建一个新的库:
 
 ```sh
 npx nx g @nrwl/angular:lib ui
 ```
 
-You should see the following:
+您应该会看到以下内容:
 
 ```treeview
 myorg/
@@ -45,7 +47,7 @@ myorg/
 └── tsconfig.base.json
 ```
 
-The `libs/ui/src/lib/ui.module.ts` file looks like this:
+`libs/ui/src/lib/ui.module.ts` 的文件是这样的:
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -57,9 +59,9 @@ import { CommonModule } from '@angular/common';
 export class UiModule {}
 ```
 
-## Add a component
+## 添加一个组件
 
-**Add a component to the newly created ui library by running:**
+**通过运行向新创建的 ui 库添加一个组件:**
 
 ```bash
 npx nx g component todos --project=ui --export
@@ -94,7 +96,7 @@ myorg/
 └── tsconfig.base.json
 ```
 
-**Add a `todos` input to `libs/ui/src/lib/todos/todos.component.ts`.**
+**添加一个 `todos` 输入到 `libs/ui/src/lib/todos/todos.component.ts`.**
 
 ```typescript
 import { Component, OnInit, Input } from '@angular/core';
@@ -114,7 +116,7 @@ export class TodosComponent implements OnInit {
 }
 ```
 
-**And update `todos.component.html` to display the given todos:**
+**并 `todos.component.html` 显示给定的待办事项:**
 
 ```html
 <ul>
@@ -122,9 +124,9 @@ export class TodosComponent implements OnInit {
 </ul>
 ```
 
-## Use the UI library
+## 使用 UI 库
 
-**Now import `UiModule` into `apps/todos/src/app/app.module.ts`.**
+**现在导入 `UiModule` 到 `apps/todos/src/app/app.module.ts`.**
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -143,7 +145,7 @@ import { UiModule } from '@myorg/ui';
 export class AppModule {}
 ```
 
-**And update `app.component.html`:**
+**和更新 `app.component.html`:**
 
 ```html
 <h1>Todos</h1>
@@ -153,7 +155,7 @@ export class AppModule {}
 <button (click)="addTodo()">Add Todo</button>
 ```
 
-Restart the api and application in separate terminal windows
+在单独的终端窗口中重新启动 api 和应用程序
 
 ```bash
 npx nx serve api
@@ -163,6 +165,6 @@ npx nx serve api
 npx nx serve todos
 ```
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 9: Using the Project Graph](/angular-tutorial/09-dep-graph)
+- 继续[步骤 9:使用项目图](/angular-tutorial/09-dep-graph)

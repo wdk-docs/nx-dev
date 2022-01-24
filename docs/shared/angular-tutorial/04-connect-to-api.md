@@ -1,8 +1,9 @@
 # Angular Nx 教程-第四步:连接到一个 API
 
-Real-world applications do not live in isolation — they need APIs to talk to. Setup your app to talk to an API.
+现实世界的应用程序并不是孤立存在的——它们需要与 api 进行通信。
+设置你的应用程序与 API 对话。
 
-**Open `apps/todos/src/app/app.module.ts` to import `HttpClientModule`.**
+**打开 `apps/todos/src/app/app.module.ts` 导入 `HttpClientModule`.**
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppModule {}
 ```
 
-**Now, use `HttpClient` in the component to get the data from the api.**
+**现在，在组件中使用`HttpClient`从 api 获取数据。**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -54,6 +55,6 @@ export class AppComponent {
 }
 ```
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 5: Add Node Application Implementing an API](/angular-tutorial/05-add-node-app)
+- 继续[步骤 5:添加实现 API 的节点应用程序](/angular-tutorial/05-add-node-app)

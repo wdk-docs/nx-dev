@@ -1,10 +1,9 @@
 # Angular Nx 教程-第六步:代理
 
-You passed `--frontendProject=todos` when creating the node application. What did that argument do?
+您在创建节点应用程序时传递了`--frontendProject=todos`。这个论点做了什么?
+它创建了一个代理配置，允许 Angular 应用在开发过程中与 API 对话。
 
-It created a proxy configuration that allows the Angular application to talk to the API in development.
-
-**To see how it works, open `apps/todos/project.json` and find the `serve` target of the todos app.**
+**要查看它是如何工作的，请打开`apps/todos/project.json`，并找到 todos 应用程序的 `serve` 目标。**
 
 ```json
 {
@@ -26,9 +25,9 @@ It created a proxy configuration that allows the Angular application to talk to 
 }
 ```
 
-**Note the `proxyConfig` property.**
+**注意`proxyConfig`属性。**
 
-**Now open `apps/todos/proxy.conf.json`:**
+**现在打开 `apps/todos/proxy.conf.json`:**
 
 ```json
 {
@@ -39,8 +38,8 @@ It created a proxy configuration that allows the Angular application to talk to 
 }
 ```
 
-This configuration tells `nx serve` to forward all requests starting with `/api` to the process listening on port `3333`.
+这个配置告诉 `nx serve` 将所有以 `/api` 开头的请求转发给监听端口 `3333`的进程。
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 7: Share Code](/angular-tutorial/07-share-code)
+- 继续[步骤 7:共享代码](/angular-tutorial/07-share-code)

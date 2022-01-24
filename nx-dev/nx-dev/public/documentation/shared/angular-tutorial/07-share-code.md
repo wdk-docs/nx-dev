@@ -1,14 +1,18 @@
 # Angular Nx 教程-第 7 步:共享代码
 
-Awesome! The application is working end to end! However, there is a problem. Both the backend and the frontend define the `Todo` interface. The interface is in sync now, but in a real application, over time, it will diverge, and, as a result, runtime errors will creep in. You should share this interface between the backend and the frontend. In Nx, you can do this by creating a library.
+太棒了!应用程序是端到端工作!然而，有一个问题。
+后端和前端都定义了 `Todo` 接口。
+接口现在是同步的，但在实际的应用程序中，随着时间的推移，它会出现分歧，从而导致运行时错误。
+您应该在后端和前端之间共享这个接口。
+在 Nx 中，可以通过创建一个库来实现这一点。
 
-**Run the following command to create a library:**
+**运行如下命令创建库:**
 
 ```bash
 npx nx g @nrwl/workspace:lib data
 ```
 
-The result should look like this:
+结果应该是这样的:
 
 ```treeview
 myorg/
@@ -38,7 +42,7 @@ myorg/
 └── tsconfig.base.json
 ```
 
-**Copy the interface into `libs/data/src/lib/data.ts`.**
+**将接口复制到 `libs/data/src/lib/data.ts`.**
 
 ```typescript
 export interface Todo {
@@ -46,13 +50,15 @@ export interface Todo {
 }
 ```
 
-### A note about VS Code :
+### 关于 VS Code 的一个说明:
 
-If you're using [VS Code](https://code.visualstudio.com/) it may be necessary at this point to restart the TS server so that the new `@myorg/data` package is recognized. This may need to be done **every time a new workspace library is added**. If you install the [Nx Console](/using-nx/console) extension you won't need to take this step.
+如果你正在使用[VS Code](https://code.visualstudio.com/)，在这一点上可能需要重启 TS 服务器，以便识别新的“@myorg/data”包。
+这可能需要在**每次添加新的工作空间库时**进行。
+如果你安装了 [Nx Console](/using-nx/console) 扩展，你不需要采取这个步骤。
 
-## Refactor the API
+## 重构的 API
 
-**Now update `apps/api/src/app/app.service.ts` to import the interface:**
+**现在更新的应用程序 `apps/api/src/app/app.service.ts` 用于导入接口:**
 
 ```typescript
 import { Injectable } from '@nestjs/common';
@@ -74,9 +80,9 @@ export class AppService {
 }
 ```
 
-## Update the Angular application
+## 更新 Angular 应用
 
-**Next import the interface in `apps/todos/src/app/app.component.ts`:**
+**接下来将接口导入 `apps/todos/src/app/app.component.ts`:**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -107,9 +113,9 @@ export class AppComponent {
 }
 ```
 
-> Every time you add a new library, you have to restart `npx nx serve`.
+> 每次添加新库时，都必须重新启动 `npx nx serve`.
 
-Restart the api and application in separate terminal windows
+在单独的终端窗口中重新启动 api 和应用程序
 
 ```bash
 npx nx serve api
@@ -119,8 +125,8 @@ npx nx serve api
 npx nx serve todos
 ```
 
-And you should see the application running.
+您应该会看到应用程序正在运行。
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 8: Create Libraries](/angular-tutorial/08-create-libs)
+- 继续[步骤 8:创建库](/angular-tutorial/08-create-libs)

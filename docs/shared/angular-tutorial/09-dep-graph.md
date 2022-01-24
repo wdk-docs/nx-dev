@@ -1,17 +1,19 @@
-# Angular Nx 教程-第 9 步:使用项目图
+# Angular Nx 教程 - 第 9 步:使用项目图
 
-An Nx workspace can contain dozens or hundreds of applications and libraries. As a codebase grows, it becomes more difficult to understand how they depend on each other and the implications of making a particular change.
+Nx 工作区可以包含数十或数百个应用程序和库。
+随着代码库的增长，要理解它们之间的相互依赖以及进行特定更改的含义变得更加困难。
 
-Previously, some senior architect would create an ad-hoc dependency diagram and upload it to a corporate wiki. The diagram is not correct even on Day 1 and gets more and more out of sync with every passing day.
+以前，一些高级架构师会创建一个特别的依赖关系图，并将其上传到公司的 wiki 上。
+这个图表即使在第一天也不正确，并且随着时间的推移越来越不同步。
 
-With Nx, you can do better than that.
+有了 Nx，您可以做得更好。
 
-Run the command to see the project graph for your workspace.
+运行该命令查看工作区的项目图。
 
 ```sh
 npx nx graph
 ```
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 10: Using Computation Caching](/angular-tutorial/10-computation-caching)
+- 继续[步骤 10:使用计算缓存](/angular-tutorial/10-computation-caching)

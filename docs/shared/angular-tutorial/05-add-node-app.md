@@ -1,10 +1,15 @@
 # Angular Nx 教程-第 5 步:添加实现 API 的节点应用
 
-The requests fail because the API has not been created yet. Using Nx you can develop node applications next to your Angular applications. You can use same commands to run and test them. You can share code between the backend and the frontend. Use this capability to implement the API service.
+请求失败是因为 API 还没有创建。
+使用 Nx，你可以在 Angular 应用旁边开发节点应用。
+您可以使用相同的命令来运行和测试它们。
+您可以在后端和前端之间共享代码。
+使用此功能来实现 API 服务。
 
-## Add NestJS plugin to your workspace
+## 将 NestJS 插件添加到您的工作区
 
-Nx is an extensible framework with plugins for many modern tools and frameworks. **To see some plugins, run `nx list`:**
+Nx 是一个可扩展的框架，包含许多现代工具和框架的插件。
+**要查看一些插件，运行 `nx list`:**
 
 ```bash
 >  NX  Installed plugins:
@@ -37,7 +42,7 @@ Nx is an extensible framework with plugins for many modern tools and frameworks.
   ...
 ```
 
-**Add the dependency:**
+**添加依赖关系:**
 
 ```bash
 npm install --save-dev @nrwl/nest
@@ -49,19 +54,19 @@ or
 yarn add --dev @nrwl/nest
 ```
 
-> `@nrwl/nest` also added `@nrwl/node`. Run `nx list @nrwl/nest` and `nx list @nrwl/node` to see what those plugins provide.
+> `@nrwl/nest` 同时添加 `@nrwl/node`. 运行 `nx list @nrwl/nest` 和 `nx list @nrwl/node` 看看这些插件提供了什么.
 
-## Create a NestJS application
+## 创建一个 NestJS 应用程序
 
-**Run the following to generate a new Nest application:**
+**运行以下命令生成一个新的 Nest 应用程序:**
 
 ```bash
 npx nx g @nrwl/nest:app api --frontendProject=todos
 ```
 
-Nx asks you a few questions, and, as with the Angular application, the defaults work well here.
+Nx 会问你一些问题，就像 Angular 应用一样，这里的默认值工作得很好。
 
-After this is done, you should see something like this:
+完成此操作后，您应该会看到如下内容:
 
 ```treeview
 myorg/
@@ -94,15 +99,16 @@ myorg/
 └── tsconfig.base.json
 ```
 
-The `apps` directory is where Nx places anything you can run: frontend applications, backend applications, e2e test suites. That's why the `api` application appeared there.
+`apps` 目录是 Nx 存放任何你可以运行的东西的地方:前端应用程序、后端应用程序、端到端测试套件。
+这就是为什么`api`应用程序出现在那里。
 
-You can run:
+您可以运行:
 
-- `npx nx serve api` to serve the application
-- `npx nx build api` to build the application
-- `npx nx test api` to test the application
+- `npx nx serve api` 为应用程序提供服务
+- `npx nx build api` 要构建应用程序
+- `npx nx test api` 要测试应用程序
 
-**Open `apps/api/src/app/app.module.ts`.**
+**打开 `apps/api/src/app/app.module.ts`.**
 
 ```typescript
 import { Module } from '@nestjs/common';
@@ -118,9 +124,12 @@ import { AppService } from './app.service';
 export class AppModule {}
 ```
 
-We recommend using the [Nest](/nest/overview) framework when creating node applications. Nest is a powerful framework which helps develop robust node applications. You can also use Express or any node libraries with Nx.
+我们建议在创建节点应用程序时使用 [Nest](/nest/overview) 框架。
+Nest 是一个强大的框架，可以帮助开发健壮的节点应用程序。
+您还可以在 Nx 中使用 Express 或任何节点库。
 
-In this case you have an application that registers a service and a controller. Services in Nest are responsible for the business logic, and controllers are responsible for implementing Http endpoints.
+在本例中，您有一个注册服务和控制器的应用程序。
+Nest 中的服务负责业务逻辑，控制器负责实现 Http 端点。
 
 **Update `apps/api/src/app/app.service.ts`:**
 
@@ -147,7 +156,7 @@ export class AppService {
 }
 ```
 
-**Next, update the controller to invoke the service:**
+**接下来，更新控制器以调用服务:**
 
 ```typescript
 import { Controller, Get, Post } from '@nestjs/common';
@@ -170,14 +179,14 @@ export class AppController {
 }
 ```
 
-In a new terminal window, serve the API.
+在一个新的终端窗口中，提供 API。
 
 ```bash
 npx nx serve api
 ```
 
-The API starts running on port `3333`.
+API 开始在端口`3333`上运行。
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 6: Proxy](/angular-tutorial/06-proxy)
+- 继续[步骤 6:代理](/angular-tutorial/06-proxy)

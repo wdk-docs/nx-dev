@@ -1,17 +1,17 @@
 # Angular Nx 教程-第二步:添加端到端测试
 
-By default, Nx uses [Cypress](/cypress/overview) to run E2E tests.
+默认情况下，Nx 使用[Cypress](/cypress/overview)运行端到端测试。
 
-**Open `apps/todos-e2e/src/support/app.po.ts`.** It's a page object file that contains helpers for querying the page.
+**打开 `apps/todos-e2e/src/support/app.po.ts`.** 它是一个页面对象文件，包含查询页面的助手。
 
-**Add the following two helpers:**
+**添加以下两个助手:**
 
 ```typescript
 export const getTodos = () => cy.get('li.todo');
 export const getAddTodoButton = () => cy.get('button#add-todo');
 ```
 
-**Next, update `apps/todos-e2e/src/integration/app.spec.ts`.**
+**接下来,更新 `apps/todos-e2e/src/integration/app.spec.ts`.**
 
 ```typescript
 import { getAddTodoButton, getTodos } from '../support/app.po';
@@ -27,14 +27,14 @@ describe('TodoApps', () => {
 });
 ```
 
-This is a simple example of an E2E test, but it suffices for the purposes of this tutorial.
+这是一个简单的 E2E 测试示例，但对于本教程来说已经足够了。
 
-If you have not done so already, stop the `npx nx serve` command and run `npx nx e2e todos-e2e --watch`.
+如果你还没有这样做，停止`npx nx serve`命令，然后运行`npx nx e2e todos-e2e --watch`。
 
-A UI opens. Click the button in the top right corner that says "Run 1 integration spec". Keep the E2E tests running.
+UI 打开。点击右上角显示"Run 1 integration spec"的按钮。保持端到端测试运行。
 
-As you progress through the tutorial, you work on making these E2E tests pass.
+在学习本教程的过程中，您将努力使这些端到端测试通过。
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 3: Display Todos](/angular-tutorial/03-display-todos)
+- 继续[步骤 3:显示待办事项](/angular-tutorial/03-display-todos)

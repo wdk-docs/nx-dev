@@ -1,14 +1,15 @@
 # Angular Nx 教程-第三步:显示待办事项
 
-Great! You have a failing E2E test. Now you can make it pass!
+太棒了!您有一个失败的端到端测试。现在你可以让它通过了!
 
-The best way to work with Cypress is to keep the failing E2E test running while working on the app. This helps you see the progress you are making.
+使用 Cypress 的最佳方法是在开发应用程序时继续运行失败的端到端测试。
+这有助于你看到你正在取得的进步。
 
-## Show todos
+## 显示 todos
 
-**Open `apps/todos`.** If you have used Angular CLI, this should look very familiar: same layout, same module and component files. The only difference is that Nx uses Jest instead of Karma.
+**打开 `apps/todos`.** 如果你使用过 Angular CLI，这看起来应该很熟悉: 相同的布局，相同的模块和组件文件. 唯一的区别是 Nx 使用 Jest 而不是 Karma.
 
-To make the first assertion of the e2e test pass, update `apps/todos/src/app/app.component.ts`:
+要通过 e2e 测试的第一个断言，请进行更新 `apps/todos/src/app/app.component.ts`:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -27,7 +28,7 @@ export class AppComponent {
 }
 ```
 
-and `apps/todos/src/app/app.component.html`:
+添加 `apps/todos/src/app/app.component.html`:
 
 ```html
 <h1>Todos</h1>
@@ -37,11 +38,12 @@ and `apps/todos/src/app/app.component.html`:
 </ul>
 ```
 
-**Rerun the specs by clicking the button in the top right corner of the left pane.** Now the tests fail while trying to find the add todo button.
+**单击左侧窗格右上角的按钮重新运行规范。**
+现在，在试图找到添加 todo 按钮时，测试会失败。
 
-## Add todos
+## 添加 todos
 
-**Add the `add-todo` button with the corresponding click handler.**
+**使用相应的点击处理程序添加`add-todo`按钮。**
 
 ```typescript
 import { Component } from '@angular/core';
@@ -76,8 +78,8 @@ export class AppComponent {
 <button id="add-todo" (click)="addTodo()">Add Todo</button>
 ```
 
-The tests should pass now.
+测试现在应该通过了。
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 4: Connect to an API](/angular-tutorial/04-connect-to-api)
+- 继续[步骤 4:连接到 API](/angular-tutorial/04-connect-to-api)

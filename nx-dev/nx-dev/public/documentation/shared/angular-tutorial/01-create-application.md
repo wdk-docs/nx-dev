@@ -1,18 +1,18 @@
 # Angular Nx 教程-第一步:创建应用
 
-In this tutorial you use Nx to build a full-stack application out of common libraries using modern technologies like Cypress and Nest.
+在本教程中，您将使用 Nx 构建一个使用现代技术(如 Cypress 和 Nest)的通用库的全栈应用程序。
 
-> This tutorial uses several Nx plugins to provide a rich dev experience. **All the plugins are optional.** [Read about using Nx Core without plugins](/getting-started/nx-core).
+> 本教程使用几个 Nx 插件来提供丰富的开发体验。 **所有插件都是可选的。** [阅读关于在没有插件的情况下使用 Nx Core](/getting-started/nx-core).
 
-## Create a new workspace
+## 创建一个新的工作空间
 
-**Start by creating a new workspace.**
+**首先创建一个新的工作区。**
 
 ```bash
 npx create-nx-workspace@latest
 ```
 
-You then receive the following prompts in your command line:
+然后在命令行中收到以下提示:
 
 ```bash
 Workspace name (e.g., org name)     myorg
@@ -21,9 +21,9 @@ Application name                    todos
 Default stylesheet format           CSS
 ```
 
-> You can also choose to add [Nx Cloud](https://nx.app), but its not required for the tutorial.
+> 您也可以选择添加[Nx Cloud](https://nx.app)，但它不是本教程所要求的。
 
-When asked about 'preset', select `angular`, and `todos` for the app name.
+当被问及`preset`时，选择`angular`和`todos`作为应用程序的名称。
 
 ```treeview
 myorg/
@@ -76,54 +76,54 @@ myorg/
 └── tsconfig.base.json
 ```
 
-The generate command added two projects to our workspace:
+generate 命令向工作区添加了两个项目:
 
-- An Angular application
-- E2E tests for the Angular application
+- 一个 angular 应用程序
+- Angular 应用的端到端测试
 
-## Serve the newly created application
+## 服务于新创建的应用程序
 
-Now that the application is set up, run it locally via:
+现在，应用程序已经设置好，可以通过:
 
 ```bash
 npx nx serve todos
 ```
 
-## Note on the Nx CLI
+## 请在 Nx 命令行中注意
 
-If you would prefer to run using a global installation of Nx, you can run:
+如果你更喜欢使用全局安装的 Nx 运行，你可以运行:
 
 ```bash
 nx serve todos
 ```
 
-Depending on how your dev env is set up, the command above might result in `Command 'nx' not found`.
+根据你的 dev env 是如何设置的，上面的命令可能会导致`Command 'nx' not found`。
 
-To fix it, you can either install the `nx` cli globally by running:
+要修复它，你可以通过运行全局安装 `nx` 命令行:
 
 ```bash
 npm install -g nx
 ```
 
-or
+或者
 
 ```bash
 yarn global add nx
 ```
 
-Alternatively, you can run the local installation of Nx by prepending every command with `npx`:
+或者，你可以通过在每个命令前加上 `npx` 来运行 Nx 的本地安装。:
 
 ```bash
 npx nx serve todos
 ```
 
-or
+或者
 
 ```bash
 yarn nx serve todos
 ```
 
-## Note on `nx serve` and `ng serve`
+## 关于`nx serve`和`ng serve`的注释
 
 The Nx CLI syntax is intentionally similar to the Angular CLI. The `nx serve` command
 produces the same result as `ng serve`, and `nx build` produces the same results as `ng build`. However, the Nx CLI
@@ -131,6 +131,6 @@ supports advanced capabilities that aren't supported by the Angular CLI. For ins
 works when using the Nx CLI. In other words, using `nx` instead of `ng` results in the same output, but often performs
 a lot better.
 
-## What's Next
+## 接下来是什么
 
-- Continue to [Step 2: Add E2E Tests](/angular-tutorial/02-add-e2e-test)
+- 继续[步骤 2:添加端到端测试](/angular-tutorial/02-add-e2e-test)

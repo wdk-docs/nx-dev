@@ -1476,17 +1476,17 @@
             "file": "shared/guides/browser-support"
           },
           {
-            "name": "Next.js项目与Nx",
+            "name": "Nx运行Next.js项目",
             "id": "nextjs",
             "file": "shared/guides/nextjs"
           },
           {
-            "name": "使用Nx进行原生React",
+            "name": "Nx运行React Native",
             "id": "react-native",
             "file": "shared/guides/react-native"
           },
           {
-            "name": "Deploying Next.js applications to Vercel",
+            "name": "部署 Next.js 应用到 Vercel",
             "id": "deploy-nextjs-to-vercel",
             "file": "shared/guides/deploy-nextjs-to-vercel"
           },

@@ -1,19 +1,20 @@
-# Updating Nx
+# 更新 Nx
 
-The Nx CLI provides the `migrate` command to help you stay up to date with the latest version of Nx.
+Nx CLI 提供了`migrate`命令来帮助你跟上 Nx 的最新版本。
 
-Not only does `nx migrate` update you to the latest version of Nx, but it also updates the versions of dependencies that we support and test such as Jest and Cypress. You can also use the `migrate` command to update any Nx plugin.
+`nx migrate` 不仅会将您更新到最新版本的 Nx，而且还会更新我们支持和测试的依赖关系版本，如 Jest 和 Cypress。
+你也可以使用`migrate`命令来更新任何 Nx 插件。
 
-## Migrating to the latest Nx version
+## 迁移到最新的 Nx 版本
 
-Migration happens in two steps:
+迁移分为两个步骤:
 
-- The installed dependencies are updated including the `package.json` (and `node_modules`).
-- The source code in the repo is updated to match the new versions of packages in `package.json`.
+- 安装的依赖会被更新，包括`package.json` (和 `node_modules`)。
+- repo 中的源代码会被更新以匹配`package.json`中的新版本的包。
 
-### Step 1: Updating dependencies and generating migrations
+### 步骤 1:更新依赖项并生成迁移
 
-First, run the `migrate` command:
+首先，运行 `migrate` 命令:
 
 ```bash
 nx migrate latest # same as nx migrate @nrwl/workspace@latest

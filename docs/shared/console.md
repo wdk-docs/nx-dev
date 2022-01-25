@@ -1,99 +1,122 @@
-# Nx Editor Plugins
+# Nx 编辑器插件
 
-**Spend less time looking up command line arguments and more time shipping incredible products.**
+**花更少的时间查找命令行参数，花更多的时间交付令人难以置信的产品。**
 
-With Nx, you can get a full-stack application up and running in minutes, no need to figure out sourcemaps, webpack or test runners. It all works out of the box. Nx also helps you to enforce consistent development practices by generating components, services, and state management modules.
+有了 Nx，你可以在几分钟内启动并运行一个全栈的应用程序，而不需要弄清楚源程序、webpack 或测试运行程序。
+这一切都是现成的。
+Nx 还可以通过生成组件、服务和状态管理模块来帮助您执行一致的开发实践。
 
-## Why use Nx Editor Plugins?
+## 为什么使用 Nx 编辑器插件?
 
-Developers use both command-line tools and user interfaces. They commit in the terminal, but resolve conflicts in VSCode or WebStorm. They use the right tool for the job.
+开发人员同时使用命令行工具和用户界面。
+它们在终端中提交，但在 VSCode 或 WebStorm 中解决冲突。
+他们使用正确的工具来完成工作。
 
-Nx is a command-line tool, which works great when you want to serve an application or generate a simple component. But it falls short once you start doing advanced things.
+Nx 是一个命令行工具，当你想要提供一个应用程序或生成一个简单的组件时，它可以很好地工作。
+但一旦你开始做高级的事情，它就会失效。
 
-For instance:
+例如:
 
-- Exploring custom generator collections is hard in the terminal, but it's easy using Nx Console.
-- Using rarely-used flags is challenging. Do you pass absolute or relative paths? You don't have to remember any flags, names or paths -  Nx Console will help you by providing autocompletion and validating your inputs.
-- Finding the right Nx extension can take a long time. When using Nx Console, you can find and install an extension in minutes.
+- 在终端中探索自定义生成器集合很困难，但是使用 Nx Console 很容易。
+- 使用很少使用的标志是一项挑战。传递绝对路径还是相对路径? 你不需要记住任何标志，名称或路径- Nx Console 将帮助你提供自动完成和验证你的输入。
+- 找到合适的 Nx 扩展可能需要很长时间。当使用 Nx Console 时，您可以在几分钟内找到并安装一个扩展。
 
-Nx Console does all that and more!
+Nx Console 做了所有这些，甚至更多!
 
-## Download
+## 下载
 
 ### VSCode
 
-If you are using [VSCode](https://code.visualstudio.com/), you can install the [Nx Console VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console) from Marketplace. The Nx Console VSCode Plugin is **built and maintained by the Nx team**.
+如果你正在使用[VSCode](https://code.visualstudio.com/)，你可以从市场安装[Nx 控制台 VSCode 插件](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)。
+Nx Console VSCode Plugin 是**由 Nx 团队构建和维护的**。
 
 ### WebStorm
 
-If you are using [WebStorm](https://www.jetbrains.com/webstorm/), you can install one of the available plugins:
+如果你正在使用[WebStorm](https://www.jetbrains.com/webstorm/)，你可以安装其中一个可用的插件:
 [nx-webstorm](https://plugins.jetbrains.com/plugin/15000-nx-webstorm)
 [Nx Console Idea](https://plugins.jetbrains.com/plugin/15101-nx-console-idea)
 
-These plugins are **NOT** built or maintained by the Nx team. They are maintained by independent community contributors.
+这些插件不是由 Nx 团队构建或维护的。它们由独立的社区贡献者维护。
 
-## Nx Console for VSCode
+## 用于 VSCode 的 Nx 控制台
 
 ![Nx Console logo](/shared/nx-console-logo.png)
 
-- [Install from the VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
-- [Contribute on GitHub](https://github.com/nrwl/nx-console)
+- [从 VSCode 市场安装](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
+- [GitHub 上的贡献](https://github.com/nrwl/nx-console)
 
-![Nx Console screenshot](/shared/nx-console-screenshot.png)
+![Nx控制台屏幕截图](/shared/nx-console-screenshot.png)
 
-### True UI for Nx
+### Nx 的真正 UI
 
-Nx Console is the UI for Nx. It works for any generator or any architect commands. Nx Console does not have a specific UI for, say, generating a component. Instead, Nx Console does what the command-line version of Nx does - it analyzes the same meta information to create the needed UI. This means that anything you can do with Nx, you can do with Nx Console. After all, Nx Console is the UI for Nx.
+Nx Console 是 Nx 的 UI。
+它适用于任何生成器或任何架构师命令。
+Nx Console 没有特定的 UI 来生成组件。
+相反，Nx Console 做了 Nx 命令行版本所做的事情——它分析相同的元信息来创建所需的 UI。
+这意味着任何你可以用 Nx 做的事情，你都可以用 Nx 控制台做。毕竟，Nx Console 是 Nx 的 UI。
 
-### Useful for both experts and beginners
+### 对专家和初学者都有用
 
-Even though we started building Nx Console as a tool for experts, we also aimed to make Nx Console a great tool for developers who are new to development or Nx. You can create projects, interact with your editor, run generators and commands and install extensions without ever touching the terminal or having to install any node packages globally. Also, Nx Console highlights the properties you are likely to use for built-in generators and commands, so if you haven't used the CLI, you don't get overwhelmed.
+尽管我们最初是将 Nx Console 作为一种面向专家的工具来开发的，但我们也希望让 Nx Console 成为一种适合于开发新手或 Nx 开发者的优秀工具。
+您可以创建项目，与您的编辑器交互，运行生成器和命令，并安装扩展，而无需接触终端或必须全局安装任何节点包。
+此外，Nx Console 突出显示了您可能用于内置生成器和命令的属性，因此，如果您没有使用 CLI，您不会感到不知所措。
 
-### Documentation
+### 文档
 
-#### Generate
+#### 生成
 
-The `Generate` action allows you to choose a generator and then opens a form listing out all the options for that generator. As you make changes to the form, the generator is executed in `--dry-run` mode in a terminal so you can preview the results of running the generator in real time.
+`Generate` 动作允许您选择一个生成器，然后打开一个列出该生成器的所有选项的表单。
+当您更改表单时，生成器会在终端中以 `--dry-run` 模式执行，因此您可以实时预览运行生成器的结果。
 
-**From the Command Palette**
+**从命令面板**
 
-You can also launch the `Generate` action from the Command Palette (`⇧⌘P`) by selecting `nx: generate (ui)`.
+您也可以通过选择`nx: generate (ui)`从命令面板中启动`Generate`操作(`⇧⌘P`)。
 
-You can even construct the generator options while staying entirely within the Command Palette. Use `⇧⌘P` to open the Command Palette, then select `nx: generate`. After choosing a generator, select any of the listed options to modify the generator command. When you're satisfied with the constructed command, choose the `Execute` command at the top of the list.
+您甚至可以在完全使用命令面板的情况下构造生成器选项。
+使用`⇧⌘P`打开命令面板，然后选择`nx: generate`。
+选择生成器之后，选择列出的任何选项来修改生成器命令。
+当您对构造的命令感到满意时，选择列表顶部的 `Execute` 命令。
 
-#### Run
+#### 运行
 
-The `Run` action allows you to choose an executor command and then opens a form listing out all the options for that executor. The frequently used executor commands `build`, `serve`, `test`, `e2e` and `lint` also have their own dedicated actions.
+`Run` 操作允许您选择一个执行器命令，然后打开一个列出该执行器的所有选项的表单。
+常用的执行器命令 `build`, `serve`, `test`, `e2e` 和 `lint` 也有自己的专用动作。
 
-**From the Command Palette**
+**从命令面板**
 
-You can also construct the executor command options while staying entirely within the Command Palette. Use `⇧⌘P` to open the Command Palette, then select `nx: test`. After choosing a project, select any of the listed options to modify the executor command options. When you're satisfied with the constructed command, choose the `Execute` command at the top of the list.
+您还可以构造执行器命令选项，同时完全保持在命令面板中。
+使用 `⇧⌘P`打开命令面板，然后选择 `nx: test`。
+选择项目后，选择列出的任何选项来修改执行器命令选项。
+当您对构造的命令感到满意时，选择列表顶部的 `Execute` 命令。
 
-#### Common Nx Commands
+#### 常见 Nx 命令
 
-You can also launch other common Nx commands with the options listed out in the Command Palette.
+您还可以使用命令面板中列出的选项启动其他常见的 Nx 命令。
 
-#### Projects
+#### 项目
 
-Clicking on the name of any project navigates to that project's definition in the `workspace.json` (or `angular.json`) file. Clicking on the name of any executor command navigates to that executor command's definition in the `workspace.json` (or `angular.json`) file.
+点击任何项目的名称，就会在 `workspace.json` (或 `angular.json`) 文件中找到该项目的定义。
 
-Clicking the ![refresh-light.svg](./refresh-light.svg) icon next to the `PROJECTS` header repopulates the Projects pane from the `workspace.json` (or `angular.json`) file.
+点击任意一个 executor 命令的名称，就会导航到 `workspace.json` (或 `angular.json`) 文件中该命令的定义。
 
-Clicking the ![folder-light.svg](./folder-light.svg) icon next to a project reveals that project's folder in the VSCode Explorer pane.
+点击`PROJECTS`头旁边的![refresh-light.svg](./refresh-light.svg)图标，就可以从`workspace.json` (或 `angular.json`) 文件中重新填充 PROJECTS 窗格。
 
-Clicking the ![continue-light.svg](./continue-light.svg) icon next to an executor command executes that command without prompting for options.
+单击项目旁边的![folder-light.svg](./folder-light.svg)图标会在 VSCode Explorer 窗格中显示该项目的文件夹。
 
-#### Streamlining
+单击执行器命令旁边的![continue-light.svg](./continue-light.svg)图标将执行该命令，而不提示选项。
 
-If you find yourself running the same command many times, here are few tips to save yourself some key strokes.
+#### 简化
 
-**Rerun Last Task**
+如果您发现自己多次运行同一个命令，这里有一些提示可以帮助您节省一些按键。
 
-If you want to rerun the last task with all the same options specified, bring up the Command Palette (`⇧⌘P`) and choose `Rerun Last Task`.
+**最后重新运行任务**
 
-**Keyboard Shortcuts**
+如果你想在指定的所有选项中重新运行最后一个任务，打开命令面板 (`⇧⌘P`) 并选择 `Rerun Last Task`。
 
-You can also set up custom tasks and assign keyboard shortcuts to them. In `.vscode/tasks.json` add a task like this:
+**键盘快捷键**
+
+您还可以设置自定义任务，并为它们分配键盘快捷键。
+在 `.vscode/tasks.json` 添加一个像这样的任务:
 
 ```json
 {
@@ -103,7 +126,8 @@ You can also set up custom tasks and assign keyboard shortcuts to them. In `.vsc
 }
 ```
 
-Then from the Command Palette (`⇧⌘P`) choose `Preferences: Open Keyboard Shortcuts (JSON)`. Then add the following shortcut:
+然后在命令面板 (`⇧⌘P`) 中选择`Preferences: Open Keyboard Shortcuts (JSON)`。
+然后添加以下快捷方式:
 
 ```json
 {
@@ -113,6 +137,6 @@ Then from the Command Palette (`⇧⌘P`) choose `Preferences: Open Keyboard Sho
 }
 ```
 
-Now, pressing `^⌘T` will run `nx affected --target=test`.
+现在，按 `^⌘T` 就会运行 `nx affected --target=test`.
 
-Here is more information on [VSCode tasks](https://code.visualstudio.com/docs/editor/tasks) and [keyboard shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings).
+这里有更多关于[VSCode 任务](https://code.visualstudio.com/docs/editor/tasks)和[键盘快捷键](https://code.visualstudio.com/docs/getstarted/keybindings)的信息。

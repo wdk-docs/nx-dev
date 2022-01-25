@@ -1,10 +1,10 @@
-# Deploying Next.js applications to Vercel
+# 部署 Next.js 应用到 Vercel
 
-Starting from Nx 11, your Next.js application should already be ready for deployment to Vercel.
+从 Nx 11 开始，您的 Next.js 应用程序应该已经准备好部署到 Vercel。
 
-## Configure your Vercel project's settings appropriately
+## 适当地配置您的 Vercel 项目的设置
 
-### New Vercel project
+### 新的 Vercel 项目
 
 1. If you are "importing" your Nx workspace's repository for the first time, make sure you do _not_ choose a root directory as part of the repo selection process (therefore leaving it to be the root of the full repo/workspace)
 2. Ensure the Next.js "Framework Preset" is selected

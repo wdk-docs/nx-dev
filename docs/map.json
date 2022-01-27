@@ -271,6 +271,16 @@
             "name": "12 - 总结",
             "id": "12-summary",
             "file": "shared/angular-tutorial/12-summary"
+          },
+          {
+            "name": "13 - nestjs-ssr(新版有问题)",
+            "id": "13-universal",
+            "file": "shared/angular-tutorial/13-universal"
+          },
+          {
+            "name": "14 - ssr",
+            "id": "14-ssr",
+            "file": "shared/angular-tutorial/14-ssr"
           }
         ]
       },

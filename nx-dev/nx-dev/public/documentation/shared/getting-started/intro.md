@@ -16,7 +16,7 @@ Nx 插件虽然对许多项目非常有用，但却是完全可选的。
 当 Nx 生成所有的样板文件时，演示 Nx 提供的许多特性就更容易了。
 然而，在没有插件的工作空间中，绝大多数特性将以相同的方式工作。
 
-## Getting Started
+## 新手入门
 
 - [使用 Nx 不带插件](/getting-started/nx-core) 将帮助您理解 Nx 的核心。
 - [将 Nx 添加到现有的 monorepo 中](/migration/adding-to-monorepo) 将展示如何将 Nx 添加到一个现有的 monorepo。

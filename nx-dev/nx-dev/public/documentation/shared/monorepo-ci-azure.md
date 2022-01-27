@@ -1,6 +1,6 @@
 # Configuring CI Using Azure Pipelines and Nx
 
-Nx is a smart, fast and extensible build system, and it works really well with monorepos. Monorepos provide a lot of advantages:
+Nx 是一个智能、快速和可扩展的构建系统，它在 monorepos 中工作得非常好。Monorepos 提供了很多优势:
 
 - Everything at that current commit works together. Changes can be verified across all affected parts of the organization.
 - Easy to split code into composable modules

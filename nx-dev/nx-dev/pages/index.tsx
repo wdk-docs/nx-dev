@@ -64,14 +64,11 @@ export function Index() {
               <div className="my-8 md:my-18 2xl:my-24 flex  flex-col items-center justify-center">
                 <div className="w-full text-center flex flex-col">
                   <h1 className="text-4xl sm:text-5xl lg:text-5xl leading-none font-extrabold tracking-tight sm:mt-10 mb-8 sm:mt-14 sm:mb-10">
-                    <span className="block lg:inline">
-                      Smart, Fast and Extensible
-                    </span>{' '}
-                    Build System
+                    <span className="block lg:inline">智能、快速和可扩展</span>{' '}
+                    构建系统
                   </h1>
                   <h2 className="max-w-2xl mx-auto text-2xl font-semibold mb-10 sm:mb-11">
-                    Next generation build system with first class monorepo
-                    support and powerful integrations.
+                    具有一流的 Monorepo 支持和强大的集成的下一代构建系统。
                   </h2>
                 </div>
                 <div
@@ -86,7 +83,7 @@ export function Index() {
                       title="Start using Nx by creating a workspace"
                       className="w-full sm:w-auto flex-none bg-white text-blue-nx-base hover:text-blue-nx-dark hover:bg-gray-100 text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-offset-white transition"
                     >
-                      Create Nx Workspace
+                      创建Nx工作区
                     </a>
                   </Link>
 
@@ -95,7 +92,7 @@ export function Index() {
                       title="Add Nx to existing Monorepo"
                       className="mt-4 md:mt-0 w-full sm:w-auto flex-none bg-white text-blue-nx-base hover:text-blue-nx-dark hover:bg-gray-100 text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-offset-white transition"
                     >
-                      Add Nx to Monorepo
+                      将Nx添加到Monorepo
                     </a>
                   </Link>
                 </div>
@@ -146,14 +143,13 @@ export function Index() {
             <header className="max-w-prose mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
               <div className="text-center">
                 <h1 className="text-base font-semibold text-blue-nx-base tracking-wide uppercase">
-                  Monorepo done right
+                  Monorepo 做得正确
                 </h1>
                 <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-                  Works for Projects of Any Size
+                  为任何规模的项目工作
                 </p>
                 <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-                  Whether you have one project or one thousand, Nx will keep
-                  your CI fast and your workspace maintainable.
+                  无论您有一个项目还是一千个项目，Nx都将使您的CI保持快速和可维护性。
                 </p>
               </div>
             </header>
@@ -179,14 +175,13 @@ export function Index() {
             <header className="mx-auto max-w-prose px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8">
               <div>
                 <h1 className="text-base font-semibold tracking-wider text-blue-nx-base uppercase">
-                  Getting Started <span className="sr-only">With Nx</span>
+                  开始使用 <span className="sr-only"> Nx</span>
                 </h1>
                 <p className="mt-2 text-4xl font-extrabold text-gray-800 tracking-tight sm:text-6xl">
-                  TypeScript, React, Angular, Node and more
+                  TypeScript、React、Angular、Node等等
                 </p>
                 <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                  Nx has first-class support for many frontend and backend
-                  technologies, so its documentation comes in multiple flavours.
+                  Nx对许多前端和后端技术具有一流的支持，因此它的文档有多种风格。
                 </p>
               </div>
             </header>
@@ -200,11 +195,10 @@ export function Index() {
           >
             <div className="text-center">
               <p className="mt-1 text-4xl font-extrabold text-gray-800 sm:text-5xl sm:tracking-tight lg:text-6xl">
-                Free Courses and Videos
+                免费课程和视频
               </p>
               <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-                For visual learners we have created high-quality courses walking
-                you through building real-world examples step by step.
+                对于视觉学习者，我们创建了高质量的课程，通过构建真实世界的例子一步一步地走你。
               </p>
             </div>
           </div>
@@ -235,14 +229,13 @@ export function Index() {
             <div className="max-w-prose mx-auto py-16 px-4 sm:py-18 sm:px-6 lg:px-8">
               <div className="text-center">
                 <h1 className="text-base font-semibold text-gray-600 tracking-wide uppercase">
-                  Community
+                  社区
                 </h1>
                 <p className="mt-1 text-4xl font-extrabold text-gray-800 sm:text-5xl sm:tracking-tight lg:text-6xl">
-                  Used by Popular Open Source Projects
+                  被流行的开源项目使用
                 </p>
                 <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-                  Nx works equally well for the teams building apps and for the
-                  communities building open source libraries and tools.
+                  Nx同样适用于开发应用程序的团队，以及开发开源库和工具的社区。
                 </p>
               </div>
             </div>

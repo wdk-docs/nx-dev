@@ -1,4 +1,4 @@
-## Getting Started
+## 新手入门
 
 ### Creating an Nx Workspace
 

@@ -15,7 +15,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Getting started](#getting-started)
+- [新手入门](#getting-started)
   - [Create a new Nx workspace:](#create-a-new-nx-workspace)
   - [Install React Native plugin](#install-react-native-plugin)
   - [Create an app](#create-an-app)
@@ -49,7 +49,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Getting started
+## 新手入门
 
 ### Create a new Nx workspace:
 

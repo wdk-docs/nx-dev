@@ -1,38 +1,43 @@
-# Library Types
+# 库类型
 
-There are many different types of libraries in a workspace. In order to maintain a certain sense of order, we recommend having a small number of types, such as the below four (4) types of libraries.
+工作区中有许多不同类型的库。
+为了保持一定的秩序感，我们建议使用少量的类型，例如下面四(4)种类型的库。
 
-**Feature libraries:**
+**特征库:**
 
-Developers should consider feature libraries as libraries that implement smart UI (with access to data sources) for specific business use cases or pages in an application.
+开发人员应该考虑为应用程序中的特定业务用例或页面实现智能 UI(带有对数据源的访问)的特性库。
 
-**UI libraries:**
+**UI 库:**
 
-A UI library contains only presentational components (also called "dumb" components).
+UI 库只包含表示组件(也称为“哑”组件)。
 
-**Data-access libraries:**
+**数据访问类库:**
 
-A data-access library contains code for interacting with a back-end system. It also includes all the code related to state management.
+数据访问库包含与后端系统交互的代码。
+它还包括所有与状态管理相关的代码。
 
-**Utility libraries:**
+**实用工具库:**
 
-A utility library contains low-level utilities used by many libraries and applications.
+实用程序库包含许多库和应用程序使用的低级实用程序。
 
 ---
 
-## Feature Libraries
+## 特征库
 
-**What is it?**
+**它是什么?**
 
-A feature library contains a set of files that configure a business use case or a page in an application. Most of the components in such a library are smart components that interact with data sources. This type of library also contains most of the UI logic, form validation code, etc. Feature libraries are almost always app-specific and are often lazy-loaded.
+特性库包含一组配置业务用例或应用程序中的页面的文件。
+此类库中的大多数组件都是与数据源交互的智能组件。
+这种类型的库还包含大多数 UI 逻辑、表单验证代码等。
+特性库几乎都是特定于应用的，通常是惰性加载的。
 
-**Naming Convention**
+**命名约定**
 
 `feature` (if nested) or `feature-\*` (e.g., `feature-home`).
 
-**Dependency Constraints**
+**依赖约束**
 
-A feature library can depend on any type of library.
+一个特性库可以依赖于任何类型的库。
 
 ```treeview
 libs/
@@ -43,7 +48,7 @@ libs/
             └── lib/
 ```
 
-`feature-home` is the app-specific feature library (in this case, the "my-app" app).
+“feature-home”是应用特有的特性库(在这里是“my-app”应用)。
 
 ---
 

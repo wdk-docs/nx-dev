@@ -1,24 +1,26 @@
-# Analyzing & Visualizing Workspaces
+# 分析和可视化工作空间
 
-To be able to support the monorepo-style development, the tools must know how different projects in your workspace depend on each other. Nx uses advanced code analysis to construct this project graph. And it gives you a way to explore it:
+为了能够支持 monorepo 风格的开发，这些工具必须知道工作区中不同项目之间的相互依赖程度。
+Nx 使用高级代码分析来构建这个项目图。
+它给了你一种探索的方式:
 
-## How the Project Graph is Built
+## 项目图是如何构建的
 
-Nx creates a graph of all the dependencies between projects in your workspace using two sources of information:
+Nx 使用两个信息源来创建工作空间中所有项目之间的依赖关系图:
 
-1. Typescript `import` statements referencing a particular project's path alias
+1. Typescript `import` 语句引用了特定项目的路径别名
 
-   For instance, if a file in `my-app` has this code:
+   例如，如果`my-app`中的一个文件有以下代码:
 
    ```typescript
    import { something } from '@myorg/awesome-library';
    ```
 
-   Then `my-app` depends on `awesome-library`
+   然后`my-app`依赖于`awesome-library`
 
-2. Manually created `implicitDependencies` in the `nx.json` file.
+2. 在`nx`文件中手动创建`implicitDependencies`。
 
-   If your `nx.json` has this content:
+   如果你的`nx.json`有这个内容:
 
    ```json
    {
@@ -31,20 +33,24 @@ Nx creates a graph of all the dependencies between projects in your workspace us
    }
    ```
 
-   Then `my-app` depends on `my-api`
+   `my-app` 依赖 `my-api`
 
-## Circular Dependencies
+## 循环依赖
 
-A circular dependency is when a project transitively depends on itself. This can cause problems in the design of your software and also makes Nx's affected algorithm less effective. The lint rule, `nx-enforce-module-boundaries`, will produce an error if any circular dependencies are created and ensures that any `import` statements going across projects only `import` from the defined public apis in a project's root `index.ts` file.
+循环依赖关系是指项目在传递过程中依赖于自身。
+这可能会导致软件设计出现问题，也会降低 Nx 受影响算法的有效性。
 
-When migrating a new codebase into an nx workspace, you'll likely begin to uncover existing circular dependencies. Let's look at the simplest possible circular dependency, where `projectA` depends on `projectB` and vice versa.
+如果创建了任何循环依赖，并确保任何跨越项目的`import`语句只从项目的根`index`文件中定义的公共 api 中`import`，那么 lint 规则`nx-enforce-module-boundaries`就会产生错误。
+当将一个新的代码库迁移到 nx 工作空间时，您可能会开始发现现有的循环依赖关系。
+让我们看看最简单的循环依赖，其中`projectA`依赖于`projectB`，反之亦然。
 
-**To resolve circular dependencies:**
+**要解决循环依赖关系:**
 
-First, identify the `import` statements causing the dependency. Search in the source folder of `projectA` for references to `@myorg/projectB` and search in the source folder of `projectB` for references to `@myorg/projectA`.
+首先，确定导致依赖的`import`语句。
+在`projectA`的源文件夹中搜索`@myorg/projectB`的引用，在`projectB`的源文件夹中搜索`@myorg/projectA`的引用。
 
-Then there are three strategies you can use:
+你可以使用以下三种策略:
 
-1. Look for small pieces of code that can be moved from one project to the other.
-2. Look for code that both libraries depend on and move that code into a new shared library.
-3. Combine `projectA` and `projectB` into one library.
+1. 寻找可以从一个项目转移到另一个项目的小段代码。
+2. 寻找两个库都依赖的代码，并将该代码移动到一个新的共享库中。
+3. 将`projectA`和`projectB`合并到一个库中。

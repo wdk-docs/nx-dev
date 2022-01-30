@@ -1,14 +1,16 @@
-# Extending the Project Graph of Nx
+# 扩展 Nx 的项目图
 
-> This API is experimental and might change.
+> 这个 API 是实验性的，可能会改变。
 
-Project Graph is the representation of the source code in your repo. Projects can have files associated with them. Projects can have dependencies on each other.
+项目图是源代码在 repo 中的表示。
+项目可以有与之关联的文件。项目可以相互依赖。
 
-One of the best features of Nx is that is able to construct the project graph automatically by analyzing your source code. Currently, this works best within the JavaScript ecosystem, but it can be extended to other languages and technologies using plugins.
+Nx 最好的特性之一是能够通过分析源代码自动构建项目图。
+目前，这在 JavaScript 生态系统中工作得最好，但它可以通过插件扩展到其他语言和技术。
 
-## Adding Plugins to Workspace
+## 添加插件到工作区
 
-You can register a plugin by adding it to the plugins array in `nx.json`:
+你可以通过将插件添加到 `nx.json` 中的 `plugins` 数组中来注册插件:
 
 ```json
 {
@@ -19,23 +21,27 @@ You can register a plugin by adding it to the plugins array in `nx.json`:
 }
 ```
 
-## Implementing a Project Graph Processor
+## 实现一个项目图形处理器
 
-A Project Graph Processor that takes a project graph and returns a new project graph. It can add/remove nodes and edges.
+项目图处理器，接受项目图并返回一个新的项目图。
+它可以添加/删除节点和边。
 
-Plugins should export a function named `processProjectGraph` that handles updating the project graph with new nodes and edges. This function receives two things:
+插件应该导出一个名为`processProjectGraph`的函数，用于使用新的节点和边来更新项目图。
+这个函数接收两个东西:
 
-- A `ProjectGraph`
+- 一个 `ProjectGraph`
 
   - `graph.nodes` lists all the projects currently known to Nx. `node.data.files` lists the files belonging to a particular project.
   - `graph.dependencies` lists the dependencies between projects.
 
-- A `Context`
+- 一个 `Context`
   - `context.workspace` contains the combined configuration for the workspace.
   - `files` contains all the files found in the workspace.
   - `filesToProcess` contains all the files that have changed since the last invocation and need to be reanalyzed.
 
-The `processProjectGraph` function should return an updated `ProjectGraph`. This is most easily done using `ProjectGraphBuilder`. The builder is there for convenience, so you don't have to use it.
+`processProjectGraph`函数应该返回一个更新后的`ProjectGraph`。
+这是最容易做到的使用`ProjectGraphBuilder`。
+构建器的存在是为了方便，所以您不必使用它。
 
 ```typescript
 import {
@@ -55,7 +61,7 @@ export function processProjectGraph(
 }
 ```
 
-## Adding New Nodes to the Project Graph
+## 向项目图中添加新节点
 
 You can add nodes to the project graph. Since first-party code is added to the graph automatically, this is most commonly used for third-party packages.
 
@@ -74,13 +80,13 @@ builder.addNode({
 
 > Note: You can designate any type for the node. This differentiates third party projects from projects in the workspace. If you are writing a plugin for a different language, it's common to use IPC to get the list of nodes which you can then add using the builder.
 
-## Adding New Dependencies to the Project Graph
+## 向项目图中添加新的依赖项
 
 It's more common for plugins to create new dependencies. First-party code contained in the workspace is registered in `workspace.json` and is added to the project graph automatically. Whether your project contains TypeScript or say Java, both projects will be created in the same way. However, Nx does not know how to analyze Java sources, and that's what plugins can do.
 
 You can create 2 types of dependencies.
 
-### Implicit Dependencies
+### 隐式依赖关系
 
 An implicit dependency is not associated with any file, and can be crated as follows:
 
@@ -96,7 +102,7 @@ builder.addImplicitDependency('existing-project', 'new-project');
 
 Because an implicit dependency is not associated with any file, Nx doesn't know when it might change, so it will be recomputed every time.
 
-## Explicit Dependencies
+## 显式的依赖关系
 
 Nx knows what files have changed since the last invocation. Only those files will be present in the provided `filesToProcess`. You can associate a dependency with a particular file (e.g., if that file contains an import).
 
@@ -113,10 +119,10 @@ builder.addExplicitDependency(
 
 If a file hasn't changed since the last invocation, it doesn't need to be reanalyzed. Nx knows what dependencies are associated with what files, so it will reuse this information for the files that haven't changed.
 
-## Visualizing the Project Graph
+## 可视化项目图
 
 You can then visualize the project graph as described [here](/structure/dependency-graph). However, there is a cache that Nx uses to avoid recalculating the project graph as much as possible. As you develop your project graph plugin, it might be a good idea to set the following environment variable to disable the project graph cache: `NX_CACHE_PROJECT_GRAPH=false`.
 
-## Example Project Graph Plugin
+## 示例项目图形插件
 
 The [nrwl/nx-go-project-graph-plugin](https://github.com/nrwl/nx-go-project-graph-plugin) repo contains an example project graph plugin which adds [Go](https://golang.org/) dependencies to the Nx Project Graph! A similar approach can be used for other languages.

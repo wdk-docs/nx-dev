@@ -1,33 +1,44 @@
-# Creating Libraries
+# 创建库
 
-Like a lot of decisions in programming, deciding to make a new Nx library or not is all about trade-offs. Each organization will decide on their own conventions, but here are some trade-offs to bear in mind as you have the conversation.
+像编程中的许多决策一样，决定是否创建一个新的 Nx 库完全是一种权衡。
+每个组织将决定他们自己的惯例，但这里有一些权衡，在你进行对话时要记住。
 
-## Should I Make a New Library?
+## 我应该建一个新库吗?
 
-There are three main benefits to breaking your code up into more libraries.
+将代码分解成更多的库有三个主要好处。
 
-### 1. Faster Commands
+### 1. 更快的命令
 
-The more granular your libraries are, the more effective `nx affected` and Nx's computation cache will be. For example, if `libraryA` contains 10 tests, but only 5 of them were affected by a particular code change, all 10 tests will be run by `nx affected --target=test`. If you can predict which 5 tests are usually run together, you can split all the related code into a separate library to allow the two groups of 5 tests to be executed independently.
+你的库粒度越大，`nx affected`和 Nx 的计算缓存的效率就越高。
+例如，如果`libraryA`包含 10 个测试，但其中只有 5 个受到特定代码更改的影响，则所有 10 个测试都将由`nx affected --target=test`运行。
+如果您可以预测哪 5 个测试通常一起运行，那么您可以将所有相关的代码分割到一个单独的库中，从而允许这两组 5 个测试独立执行。
 
-### 2. Visualizing Architecture
+### 2. 可视化体系结构
 
-The `nx graph` command generates a graph of how apps and libraries depend on each other. If most of your code lives in a few giant libraries, this visualization doesn't provide much value. Adding the `--watch` flag to the command will update the visualization in-browser as you make changes.
+`nx graph` 命令生成一个图表，显示应用程序和库如何相互依赖。
+如果您的大部分代码存在于几个巨大的库中，那么这种可视化不会提供太多的价值。
+在命令中添加`--watch`标志会在你更改时更新浏览器中的可视化。
 
-### 3. Enforcing Constraints
+### 3. 强制约束
 
-You can enforce constraints on how different types of libraries depend on each other [using tags](/structure/monorepo-tags). Following pre-determined conventions on what kind of code can go in different types of libraries allows your tagging system to enforce good architectural patterns.
+您可以对不同类型的库如何相互依赖施加约束[使用标签](/structure/monorepo-tags).
+按照预先确定的约定，将何种代码放入不同类型的库中，可以让标签系统执行良好的体系结构模式。
 
-Also, each library defines its own API, which allows for encapsulating logic that other parts of codebase can not access. You can even use a [CODEOWNERS file](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners) to assign ownership of a certain library to a user or team.
+此外，每个库都定义了自己的 API，这允许封装代码库的其他部分无法访问的逻辑。
+您甚至可以使用[CODEOWNERS 文件](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)将特定库的所有权分配给用户或团队。
 
-## Should I Add to an Existing Library?
+## 我应该添加到现有的库吗?
 
-Limiting the number of libraries by keeping code in an existing library also has benefits.
+通过将代码保存在现有库中来限制库的数量也有好处。
 
-### 1. Consolidating Code
+### 1. 合并代码
 
-Related code should be close together. If a developer can accomplish a task without moving between multiple different folders, it helps them work faster and make less mistakes. Every new library adds some folders and configuration files that are not directly contributing to business value. Nx helps reduce the cost of adding a new library, but it isn't zero.
+相关代码应紧密相连。
+如果开发人员可以在不移动多个不同文件夹的情况下完成一项任务，这将帮助他们工作得更快，犯更少的错误。
+每个新库都会添加一些文件夹和配置文件，这些文件夹和配置文件不会直接对业务价值做出贡献。
+Nx 有助于降低添加新库的成本，但它不是零。
 
-### 2. Removing Constraints
+### 2. 删除约束
 
-Especially for rapidly evolving code, the standard architectural constraints may just get in the way of experimentation and exploration. It may be worthwhile to develop for a while in a single library in order to allow a real architecture to emerge and then refactoring into multiple libraries once the pace of change has slowed down.
+特别是对于快速发展的代码，标准的体系结构约束可能会阻碍实验和探索。
+在单个库中开发一段时间可能是值得的，这样可以让真正的体系结构出现，然后在更改的速度减慢后重构为多个库。

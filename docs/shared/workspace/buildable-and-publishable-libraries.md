@@ -1,4 +1,4 @@
-# Publishable and Buildable Nx Libraries
+# 可发布和可构建的 Nx 库
 
 The `--buildable` and `--publishable` options are available on the Nx library generators for the following plugins:
 
@@ -9,7 +9,7 @@ The `--buildable` and `--publishable` options are available on the Nx library ge
 
 This document will look to explain the motivations for why you would use either the `--buildable` or `--publishable` option, as well as the mechanics of how they adjust the result when you add them to your generator.
 
-## Publishable libraries
+## 可发布的库
 
 You might use the `--publishable` option when generating a new Nx library if your intention is to distribute it outside the monorepo.
 
@@ -25,7 +25,7 @@ To publish the library (for example to npm) you can run the CLI command: `npm pu
 
 For more details on the mechanics, remember that Nx is an open source project, so you can see the actual impact of the generator by looking at the source code (the best starting point is probably `packages/<framework>/src/generators/library/library.ts`).
 
-## Buildable libraries
+## 可以建造的库
 
 Buildable libraries are similar to "publishable libraries" described above. Their scope however is not to distribute or publish them to some external registry. Thus they might not be optimized for bundling and distribution.
 

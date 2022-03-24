@@ -1,4 +1,4 @@
-# Node Nx Tutorial - Step 6: Computation Caching
+# Node Nx 教程-步骤 6:计算缓存
 
 Nx has built-in computation caching, which drastically improves the performance of the commands.
 

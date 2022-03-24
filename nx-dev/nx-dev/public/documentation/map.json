@@ -18,22 +18,22 @@
             "file": "shared/getting-started/nx-setup"
           },
           {
-            "name": "Nx没有插件",
+            "name": "无插件",
             "id": "nx-core",
             "file": "shared/nx-core"
           },
           {
-            "name": "Nx 和 TypeScript",
+            "name": "TypeScript",
             "id": "nx-and-typescript",
             "file": "shared/guides/nx-and-ts"
           },
           {
-            "name": "Nx 和 React",
+            "name": "React",
             "id": "nx-and-react",
             "file": "shared/getting-started/nx-and-react"
           },
           {
-            "name": "Nx 和 Angular",
+            "name": "Angular",
             "id": "nx-and-angular",
             "file": "shared/getting-started/nx-and-angular"
           }
@@ -56,16 +56,16 @@
         ]
       },
       {
-        "name": "使用 Nx",
+        "name": "使用",
         "id": "using-nx",
         "itemList": [
           {
-            "name": "Nx CLI",
+            "name": "CLI",
             "id": "nx-cli",
             "file": "shared/using-nx/nx-cli"
           },
           {
-            "name": "Nx 编辑器插件",
+            "name": "编辑器插件",
             "id": "console",
             "file": "shared/console"
           },
@@ -90,7 +90,7 @@
             "file": "shared/using-nx/affected"
           },
           {
-            "name": "Nx插件和Devkit",
+            "name": "插件和Devkit",
             "id": "nx-devkit",
             "file": "shared/devkit-and-nx-plugins"
           },
@@ -121,17 +121,17 @@
             "file": "shared/migration/adding-to-monorepo"
           },
           {
-            "name": "来自 Angular CLI",
+            "name": "Angular CLI",
             "id": "migration-angular",
             "file": "shared/migration/migration-angular"
           },
           {
-            "name": "来自 AngularJS",
+            "name": "AngularJS",
             "id": "migration-angularjs",
             "file": "shared/migration/migration-angularjs"
           },
           {
-            "name": "保留Git的历史",
+            "name": "保留Git历史",
             "id": "preserving-git-histories",
             "file": "shared/migration/preserving-git-histories"
           },
@@ -147,7 +147,7 @@
         "id": "react-tutorial",
         "itemList": [
           {
-            "name": "1 - 创建应用程序",
+            "name": "1 - 创建应用",
             "id": "01-create-application",
             "file": "shared/react-tutorial/01-create-application"
           },
@@ -167,7 +167,7 @@
             "file": "shared/react-tutorial/04-connect-to-api"
           },
           {
-            "name": "5 - 添加节点应用程序",
+            "name": "5 - 添加节点应用",
             "id": "05-add-node-app",
             "file": "shared/react-tutorial/05-add-node-app"
           },
@@ -213,7 +213,7 @@
         "id": "angular-tutorial",
         "itemList": [
           {
-            "name": "1 - 创建应用程序",
+            "name": "1 - 创建应用",
             "id": "01-create-application",
             "file": "shared/angular-tutorial/01-create-application"
           },
@@ -233,7 +233,7 @@
             "file": "shared/angular-tutorial/04-connect-to-api"
           },
           {
-            "name": "5 - 添加节点应用程序",
+            "name": "5 - 添加节点应用",
             "id": "05-add-node-app",
             "file": "shared/angular-tutorial/05-add-node-app"
           },
@@ -289,42 +289,42 @@
         "id": "node-tutorial",
         "itemList": [
           {
-            "name": "1 - 创建应用程序",
+            "name": "1 - 创建应用",
             "id": "01-create-application",
             "file": "shared/node-tutorial/01-create-application"
           },
           {
-            "name": "2 - Display Todos",
+            "name": "2 - 显示待办事项",
             "id": "02-display-todos",
             "file": "shared/node-tutorial/02-display-todos"
           },
           {
-            "name": "3 - Share Code",
+            "name": "3 - 共享代码",
             "id": "03-share-code",
             "file": "shared/node-tutorial/03-share-code"
           },
           {
-            "name": "4 - Create Libraries",
+            "name": "4 - 创建库",
             "id": "04-create-libs",
             "file": "shared/node-tutorial/04-create-libs"
           },
           {
-            "name": "5 - Project Graph",
+            "name": "5 - 工程图",
             "id": "05-dep-graph",
             "file": "shared/node-tutorial/05-dep-graph"
           },
           {
-            "name": "6 - Use Computation Caching",
+            "name": "6 - 使用计算缓存",
             "id": "06-computation-caching",
             "file": "shared/node-tutorial/06-computation-caching"
           },
           {
-            "name": "7 - Test Affected Projects",
+            "name": "7 - 测试影响项目",
             "id": "07-test-affected-projects",
             "file": "shared/node-tutorial/07-test-affected-projects"
           },
           {
-            "name": "8 - Summary",
+            "name": "8 - 总结",
             "id": "08-summary",
             "file": "shared/node-tutorial/08-summary"
           }
@@ -750,7 +750,7 @@
         "itemList": [
           {
             "id": "overview",
-            "name": "Overview",
+            "name": "概述",
             "searchResultsName": "@nrwl/react Overview",
             "file": "shared/react-plugin"
           },
@@ -1270,7 +1270,7 @@
         "itemList": [
           {
             "id": "index",
-            "name": "Overview",
+            "name": "概述",
             "searchResultsName": "Nx Devkit",
             "file": "generated/api-nx-devkit/index"
           },
@@ -1283,11 +1283,11 @@
         ]
       },
       {
-        "name": "",
+        "name": "executors",
         "id": "executors",
         "itemList": [
           {
-            "name": "使用 运行器/构建器",
+            "name": "使用运行器/构建器",
             "id": "using-builders",
             "file": "shared/using-executors"
           },
@@ -1385,27 +1385,27 @@
         "id": "ci",
         "itemList": [
           {
-            "name": "设置Azure管道",
+            "name": "Azure管道",
             "id": "monorepo-ci-azure",
             "file": "shared/monorepo-ci-azure"
           },
           {
-            "name": "设置CircleCI",
+            "name": "CircleCI",
             "id": "monorepo-ci-circle-ci",
             "file": "shared/monorepo-ci-circle-ci"
           },
           {
-            "name": "设置GitHub动作",
+            "name": "GitHub动作",
             "id": "monorepo-ci-github-actions",
             "file": "shared/monorepo-ci-github-actions"
           },
           {
-            "name": "设置 Jenkins",
+            "name": "Jenkins",
             "id": "monorepo-ci-jenkins",
             "file": "shared/monorepo-ci-jenkins"
           },
           {
-            "name": "设置 GitLab",
+            "name": "GitLab",
             "id": "monorepo-ci-gitlab",
             "file": "shared/monorepo-ci-gitlab"
           },
@@ -1420,7 +1420,7 @@
             "file": "shared/incremental-builds"
           },
           {
-            "name": "为Angular应用设置增量构建",
+            "name": "Angular增量构建",
             "id": "setup-incremental-builds-angular",
             "file": "shared/guides/setup-incremental-builds-angular"
           }
@@ -1431,12 +1431,12 @@
         "id": "guides",
         "itemList": [
           {
-            "name": "Nx 和 Lerna/Yarn",
+            "name": "Lerna/Yarn",
             "id": "lerna-and-nx",
             "file": "shared/guides/lerna-and-nx"
           },
           {
-            "name": "Nx 和 Turborepo",
+            "name": "Turborepo",
             "id": "turbo-and-nx",
             "file": "shared/guides/turbo-and-nx"
           },
@@ -1446,57 +1446,57 @@
             "file": "shared/guides/why-monorepos"
           },
           {
-            "name": "添加图像、字体和文件",
+            "name": "图像字体文件",
             "id": "adding-assets-react",
             "file": "shared/guides/adding-assets"
           },
           {
-            "name": "使用环境变量",
+            "name": "环境变量",
             "id": "environment-variables",
             "file": "shared/guides/environment-variables"
           },
           {
-            "name": "在企业中使用Nx",
+            "name": "企业使用",
             "id": "monorepo-nx-enterprise",
             "file": "shared/monorepo-nx-enterprise"
           },
           {
-            "name": "分析构建性能",
+            "name": "构建性能",
             "id": "performance-profiling",
             "file": "shared/guides/performance-profiling"
           },
           {
-            "name": "在Nx工作区中使用ESLint",
+            "name": "使用ESLint",
             "id": "eslint",
             "file": "shared/eslint"
           },
           {
-            "name": "Nx守护进程",
+            "name": "守护进程",
             "id": "nx-daemon",
             "file": "shared/daemon"
           },
           {
-            "name": "JavaScript 和 TypeScript",
+            "name": "Js和Ts",
             "id": "js-and-ts",
             "file": "shared/guides/js-and-ts"
           },
           {
-            "name": "配置浏览器支持",
+            "name": "浏览器支持",
             "id": "browser-support",
             "file": "shared/guides/browser-support"
           },
           {
-            "name": "Nx运行Next.js项目",
+            "name": "Next.js",
             "id": "nextjs",
             "file": "shared/guides/nextjs"
           },
           {
-            "name": "Nx运行React Native",
+            "name": "React Native",
             "id": "react-native",
             "file": "shared/guides/react-native"
           },
           {
-            "name": "部署 Next.js 应用到 Vercel",
+            "name": "部署到Vercel",
             "id": "deploy-nextjs-to-vercel",
             "file": "shared/guides/deploy-nextjs-to-vercel"
           },
@@ -1506,27 +1506,27 @@
             "file": "shared/guides/webpack-5"
           },
           {
-            "name": "在React中使用Tailwind CSS",
+            "name": "Tailwind CSS",
             "id": "using-tailwind-css-in-react",
             "file": "shared/guides/using-tailwind-css-in-react"
           },
           {
-            "name": "使用 NgRx",
+            "name": "NgRx",
             "id": "misc-ngrx",
             "file": "shared/guides/misc-ngrx"
           },
           {
-            "name": "使用DataPersistence",
+            "name": "DataPersistence",
             "id": "misc-data-persistence",
             "file": "shared/guides/misc-data-persistence"
           },
           {
-            "name": "Nx Devkit 和 Angular Devkit",
+            "name": "Devkit",
             "id": "nx-devkit-angular-devkit",
             "file": "shared/guides/nx-devkit-angular-devkit"
           },
           {
-            "name": "使用Angular和Nx设置MFE",
+            "name": "设置MFE",
             "id": "setup-mfe-with-angular",
             "file": "shared/guides/setup-mfe-with-angular"
           }
@@ -1537,27 +1537,27 @@
         "id": "examples",
         "itemList": [
           {
-            "name": "Nx Micro-Frontend例子",
+            "name": "Micro-Frontend",
             "id": "nx-examples",
             "file": "shared/examples/nx-examples"
           },
           {
-            "name": "用Nx增强React开发",
+            "name": "增强React开发",
             "id": "react-nx",
             "file": "shared/examples/react-nx"
           },
           {
-            "name": "使用阿波罗GraphQL",
+            "name": "apollo GraphQL",
             "id": "apollo-react",
             "file": "shared/examples/apollo-react"
           },
           {
-            "name": "",
+            "name": "缓存",
             "id": "caching",
             "file": "shared/examples/caching"
           },
           {
-            "name": "Large Repo and DTE",
+            "name": "大库和DTE",
             "id": "dte",
             "file": "shared/examples/dte"
           }

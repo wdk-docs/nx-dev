@@ -1,4 +1,4 @@
-# Node Nx Tutorial - Step 8: Summary
+# Node Nx 教程-步骤 8:摘要
 
 In this tutorial you:
 

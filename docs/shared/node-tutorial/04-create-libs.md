@@ -1,4 +1,4 @@
-# Node Nx Tutorial - Step 4: Create Libraries
+# Node Nx 教程-步骤 4:创建库
 
 Libraries are not just a way to share code in Nx. They are also useful for factoring out code into small units with a well-defined public API.
 

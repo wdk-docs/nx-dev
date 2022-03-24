@@ -1,4 +1,4 @@
-# Node Nx Tutorial - Step 3: Share Code
+# Node Nx 教程-第三步:共享代码
 
 Awesome! The application is working as expected!
 

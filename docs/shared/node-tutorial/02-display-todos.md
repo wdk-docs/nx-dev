@@ -1,4 +1,4 @@
-# Node Nx Tutorial - Step 2: Display todos
+# Node Nx 教程-步骤 2:显示待办事项
 
 Great! you now have a server application set up to show some data when going to the `/api` route.
 

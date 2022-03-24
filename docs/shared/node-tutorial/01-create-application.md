@@ -1,10 +1,10 @@
-# Node Nx Tutorial - Step 1: Create Application
+# Node Nx 教程-步骤 1:创建应用程序
 
 In this tutorial you use Nx to build a server application out of common libraries using modern technologies.
 
 > This tutorial uses several Nx plugins to provide a rich dev experience. **All the plugins are optional.** [Read about using Nx Core without plugins](/getting-started/nx-core).
 
-## Create a New Workspace
+## 创建一个新的工作空间
 
 **Start by creating a new workspace.**
 
@@ -88,7 +88,7 @@ or
 yarn nx serve todos
 ```
 
-## Workspace.json, Targets, Executors
+## Workspace.json, 目标,执行人
 
 You configure your workspaces in `workspace.json`. This file contains the workspace projects with their architect targets. For instance, `todos` has the `build`, `serve`, `lint`, and `test` targets. This means that you can run `nx build todos`, `nx serve todos`, etc..
 
@@ -117,9 +117,9 @@ It helps with good editor integration (see [VSCode Support](https://nx.dev/l/nod
 
 But, most importantly, it provides a holistic dev experience regardless of the tools used, and enables advanced build features like distributed computation caching and distributed builds).
 
-## Serve the newly created application
+## 服务于新创建的应用程序
 
-Now that the application is set up, run it locally via:
+现在，应用程序已经设置好，通过以下方式在本地运行它:
 
 ```bash
 nx serve todos

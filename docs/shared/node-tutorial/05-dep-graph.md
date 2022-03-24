@@ -1,4 +1,4 @@
-# Node Nx Tutorial - Step 5: Project Graph
+# 节点 Nx 教程-步骤 5:项目图
 
 An Nx workspace can contain dozens or hundreds of applications and libraries. As a codebase grows, it becomes more difficult to understand how they depend on each other and the implications of making a particular change.
 

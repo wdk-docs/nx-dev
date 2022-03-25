@@ -1,15 +1,15 @@
-# Nx and Yarn/Lerna (Workspaces for Publishing NPM Packages)
+# Nx 和 Yarn/Lerna (发布 NPM 包的工作区)
 
-> In our teams we see a shift away from Lerna and a strong preference to use Nx for managing JavaScript-based monorepos.
-> [Thoughtworks Technology Radar 2021](https://www.thoughtworks.com/en-ca/radar/tools/nx)
+> 在我们的团队中，我们看到了 Lerna 的转变，人们更倾向于使用 Nx 来管理基于 javascript 的单一代码。
+> [Thoughtworks 技术雷达 2021 年](https://www.thoughtworks.com/en-ca/radar/tools/nx)
 
-- Want to know how to create a **new** Nx workspace and use Lerna/Yarn with it, check out [Using Nx Core Without Plugins](/getting-started/nx-core).
+- 想知道如何创建一个**新的** Nx 工作空间，并使用 Lerna/Yarn，请查看[使用 Nx Core 而不需要插件](/getting-started/nx-core).
 - Want to add Nx to an existing Lerna/Yarn/PNPM mononorepo, check out [Adding Nx to Lerna/Yarn/PNPM/NPM Workspace](/migration/adding-to-monorepo).
 - Want to build a publishable TS/JS library, checkout [Nx and TypeScript](/getting-started/nx-and-typescript).
 
 This guide clarifies some misconceptions about how Nx and Lerna/Yarn relate.
 
-## Nx and Lerna/Yarn Workspaces
+## Nx 和 Lerna/Yarn 工作目录
 
 Nx has more in common with the build tools used at Google or Facebook (just made a lot more easily accessible for other
 companies) than with tools like Yarn Workspaces or Lerna. When using the word "monorepo" in the context of say Google,
@@ -19,7 +19,7 @@ Lerna/Yarn/PNPM are package managers. When it comes to monorepos, they mainly pe
 choice isn't between Nx or Yarn Workspaces. It's between whether you want to have multiple `node_modules` folders (in
 this case use Nx with Yarn Workspaces) or not (use Nx without Yarn Workspaces).
 
-### Misconception: You have to choose between Nx and Yarn Workspaces/Lerna.
+### Misconception: 你必须在 Nx 和 Yarn Workspaces/Lerna 之间进行选择。
 
 Lerna, Yarn workspaces, pnpm workspaces offer the following affordances for developing multiple projects in the same
 repo:
@@ -50,7 +50,7 @@ What often happens though is when folks adopt Nx, they have better affordances f
 policy (why this is a good idea is beyond the scope of this post, but you can read more about why Google does here). But
 it's important to stress that this isn't required by Nx. It's simply something that Nx can enable you to do at scale.
 
-### Misconception: Nx is only for apps
+### 误解: Nx 只适用于应用程序
 
 If you do something well, folks assume that the only thing you can do. Nx is equally suited for publishable npm packages
 as it is for applications.
@@ -58,11 +58,11 @@ as it is for applications.
 For instance, the Nx repo itself is built with Nx. It has 2 applications and a few dozen libraries. Those libraries are
 published to NPM.
 
-### Misconception: Nx is "all-in"
+### 误解: Nx is "all-in"
 
 While Nx does have many plugins, each of them is optional. If you check out [Using Nx Core Without Plugins](/getting-started/nx-core), you will see that Nx at its core is very minimal. Much like VS Code, Nx is very minimal but can easily be extended by adding plugins. Saying this is akin to saying that VS Code is "all in". The fullness and richness of the experience depends on how many plugins you choose to use. You could install a lot of Nx Plugins that will do a lot of the heavy lifting in, for instance, connecting your Next.js, Storybook and Cypress. You could but you don't have to.
 
-### Misconception: Nx is configuration over convention
+### 误解: Nx 是基于约定的构型
 
 If you only use Nx core, the only extra piece configuration you get is `nx.json` at the root.
 

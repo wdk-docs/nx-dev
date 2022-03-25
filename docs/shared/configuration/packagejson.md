@@ -1,13 +1,12 @@
-# Configuration: package.json and nx.json
+# 配置: package.json 和 nx.json
 
-There are two main types of configuration in every Nx workspace: [project configuration](#project-configuration)
-and [the global Nx CLI configuration](#cli-configuration).
+每个 Nx 工作区中有两种主要的配置类型: [项目配置](#project-configuration) 和 [Nx CLI 全局配置](#cli-configuration).
 
 Projects can be configured in `package.json` (if you use npm scripts and not Nx executors) and `project.json` (if you
 use Nx executors). Both `package.json` and `project.json` files are located in each project's folder. Nx merges the two
 files to get each project's configuration. This guide covers the `package.json` case.
 
-## Project Configuration
+## 项目配置
 
 Every npm script defined in `package.json` is a target you can invoke via Nx. For instance, if your project has the
 following `package.json`:
@@ -56,7 +55,7 @@ You can add Nx-specific configuration as follows:
 }
 ```
 
-### outputs
+### 输出
 
 `"outputs": ["dist/libs/mylib"]` tells Nx where the `build` target is going to create file artifacts. The provided value
 is actually the default, so we can omit it in this case. `"outputs": []` tells Nx that the `test` target doesn't create
@@ -82,7 +81,7 @@ result in `mylib`'s dependencies being built as well.
 This configuration is usually not needed. Nx comes with reasonable defaults (imported in `nx.json`) which implement the
 configuration above.
 
-### tags
+### 标签
 
 You can annotate your projects with `tags` as follows:
 
@@ -122,7 +121,7 @@ You can also remove a dependency as follows:
 }
 ```
 
-### Ignoring a project
+### 忽略项目
 
 Nx will add every project with a `package.json` file in it to its project graph. If you want to ignore a particular
 project, add the following to its `package.json`:
@@ -136,7 +135,7 @@ project, add the following to its `package.json`:
 }
 ```
 
-### workspace json
+### 工作空间 json
 
 The `workspace.json` file in the root directory is optional. It's used if you want to list the projects in your workspace explicitly instead of Nx scanning the file tree for all `project.json` and `package.json` files that match the globs specified in the `workspaces` property of the root `package.json`.
 
@@ -152,7 +151,7 @@ The `workspace.json` file in the root directory is optional. It's used if you wa
 - `"version": 2` tells Nx that we are using Nx's format for the `workspace.json` file.
 - `projects` is a map of project names to their locations.
 
-## CLI Configuration
+## CLI 配置
 
 The `nx.json` file configures the Nx CLI and project defaults.
 
@@ -208,13 +207,13 @@ The following is an expanded version showing all options. Your `nx.json` will li
 
 Tells Nx what prefix to use when generating library imports.
 
-### Affected
+### 影响
 
 Tells Nx which branch and HEAD to use when calculating affected projects.
 
 - `defaultBase` defines the default base branch, defaulted to `main`.
 
-### Workspace Layout
+### 工作空间布局
 
 You can add a `workspaceLayout` property to modify where libraries and apps are located.
 
@@ -230,7 +229,7 @@ You can add a `workspaceLayout` property to modify where libraries and apps are 
 These settings would store apps in `/demos/` and libraries in `/packages/`. The paths specified are relative to the
 workspace root.
 
-### Files & Implicit Dependencies
+### 文件和隐式依赖关系
 
 Nx performs advanced source-code analysis to figure out the project graph of the workspace. So when you make a change,
 Nx can deduce what can be broken by this change. Some dependencies between projects and shared files cannot be inferred
@@ -264,7 +263,7 @@ In the example above:
 - Changing `globalFile` only affects `myapp`.
 - Changing any CSS file inside the `styles` directory only affects `myapp`.
 
-### Target Dependencies
+### 目标的依赖关系
 
 Targets can depend on other targets. A common scenario is having to build dependencies of a project first before
 building the project. The `dependsOn` property in `package.json` can be used to define the list of dependencies of an
@@ -289,7 +288,7 @@ defining `targetDependencies` in `nx.json` is helpful.
 The configuration above is identical to adding `{"dependsOn": [{"target": "build", "projects": "dependencies"]}` to
 every build target of every project.
 
-### CLI Options
+### CLI 项目
 
 The following command generates a new library: `nx g @nrwl/js:lib mylib`. After setting the `defaultCollection`property,
 the lib is generated without mentioning the plugin name: `nx g lib mylib`.
@@ -317,7 +316,7 @@ pass `--buildable=true` when creating new libraries.
 }
 ```
 
-### Tasks Runner Options
+### 运行任务选项
 
 > A task is an invocation of a target.
 

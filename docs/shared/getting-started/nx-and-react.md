@@ -1,8 +1,8 @@
-# Nx and React
+# Nx 和 React
 
 Nx is a smart, fast and extensible build system with first class monorepo support and powerful integrations. It has a powerful core and a rich plugin ecosystem.
 
-## Making Things Fast
+## 使事情快速
 
 If you're only interested in improving the performance of your monorepo by using Nx's [affected:\* commands](/using-nx/affected), [computation cache](/using-nx/cache), and [distributed task execution](/using-nx/dte), then you don't need to use any plugins. Everything will work the same way whether your monorepo has React, Vue, Svelte, or even Go, Rust, or Java apps. Nx is technology-agnostic.
 
@@ -14,7 +14,7 @@ Check out the following guides to get started:
 
 It is also a good idea to read the [mental model guide](/using-nx/mental-model) to understand how Nx works.
 
-## Nx and React Plugins
+## Nx 和 React 插件
 
 Nx plugins help you develop [React](/react/overview) applications with fully integrated support for modern tools
 and libraries like [Jest](/jest/overview), [Cypress](/cypress/overview),

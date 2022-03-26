@@ -2,15 +2,15 @@
 
 每个 Nx 工作区中有两种主要的配置类型: [项目配置](#project-configuration) 和 [Nx CLI 全局配置](#cli-configuration).
 
-项目可以在`packagejson`(如果你使用 npm 脚本而不是 Nx executor)和`projectjson`(如果你使用 Nx executor)中配置。
-`packagejson`和`projectjson`文件都位于每个项目的文件夹中。
+项目可以在`package.json`(如果你使用 npm 脚本而不是 Nx executor)和`project.json`(如果你使用 Nx executor)中配置。
+`package.json`和`project.json`文件都位于每个项目的文件夹中。
 Nx 合并这两个文件以获得每个项目的配置。
-本指南介绍了`packagejson`的情况。
+本指南介绍了`package.json`的情况。
 
 ## 项目配置
 
-在`packagejson`中定义的每个 npm 脚本都是你可以通过 Nx 调用的目标。
-例如，如果你的项目有以下`packagejson`:
+在`package.json`中定义的每个 npm 脚本都是你可以通过 Nx 调用的目标。
+例如，如果你的项目有以下`package.json`:
 
 ```jsonc
 {
@@ -125,8 +125,8 @@ Nx 使用强大的源代码分析来找出工作空间的项目图。
 
 ### 忽略项目
 
-Nx 会将每个带有“packagejson”文件的项目添加到项目图中。
-如果你想忽略一个特定的项目，在它的`packagejson`中添加以下内容:
+Nx 会将每个带有`package.json`文件的项目添加到项目图中。
+如果你想忽略一个特定的项目，在它的`package.json`中添加以下内容:
 
 ```jsonc
 {
@@ -139,8 +139,8 @@ Nx 会将每个带有“packagejson”文件的项目添加到项目图中。
 
 ### 工作空间 json
 
-根目录中的“workspacejson”文件是可选的。
-如果你想在你的工作空间中显式地列出项目，而不是 Nx 扫描所有的`projectjson`和`packagejson`文件树，以匹配在根`packagejson`的`workspace`属性中指定的 globs。
+根目录中的`workspace.json`文件是可选的。
+如果你想在你的工作空间中显式地列出项目，而不是 Nx 扫描所有的`project.json`和`package.json`文件树，以匹配在根`package.json`的`workspace`属性中指定的 globs。
 
 ```json
 {
@@ -151,15 +151,15 @@ Nx 会将每个带有“packagejson”文件的项目添加到项目图中。
 }
 ```
 
-- `"version": 2`告诉 Nx 我们正在使用 Nx 的格式来创建 workspacejson 文件。
+- `"version": 2`告诉 Nx 我们正在使用 Nx 的格式来创建 `workspace.json` 文件。
 - `projects`是一个项目名称到其位置的映射。
 
 ## CLI 配置
 
-“nxjson”文件用于配置 Nx 命令行和项目默认值。
+`nx.json`文件用于配置 Nx 命令行和项目默认值。
 
 下面是显示所有选项的扩展版本。
-您的“nxjson”可能会短得多。
+您的`nx.json`可能会短得多。
 
 ```json
 {
@@ -261,10 +261,10 @@ Nx 执行高级的源代码分析，以找出工作空间的项目图。
 
 在上面的例子中:
 
-- 更改“workspacejson”会影响到每个项目。
-- 改变`packagejson`中的`dependencies`属性会影响到每个项目。
-- 更改`packagejson`中的`mypackage`属性只会影响`mylib`。
-- 更改`packagejson`中的任何自定义检查'脚本'都会影响到每个项目。
+- 更改`workspace.json`会影响到每个项目。
+- 改变`package.json`中的`dependencies`属性会影响到每个项目。
+- 更改`package.json`中的`mypackage`属性只会影响`mylib`。
+- 更改`package.json`中的任何自定义检查'脚本'都会影响到每个项目。
 - 更改`globalFile`只影响`myapp`。
 - 更改`styles`目录中的任何 CSS 文件只会影响`myapp`。
 
@@ -272,9 +272,9 @@ Nx 执行高级的源代码分析，以找出工作空间的项目图。
 
 目标可以依赖于其他目标。
 一个常见的场景是在构建项目之前必须首先构建项目的依赖项。
-`packagejson`中的`dependsOn`属性可以用来定义单个目标的依赖项列表。
+`package.json`中的`dependsOn`属性可以用来定义单个目标的依赖项列表。
 
-通常在 repo 中，每个项目都必须定义相同的 dependsOn 配置，这就是在`nxjson`中定义`targetDependencies`是有帮助的。
+通常在 repo 中，每个项目都必须定义相同的 dependsOn 配置，这就是在`nx.json`中定义`targetDependencies`是有帮助的。
 
 ```json
 {
@@ -306,7 +306,7 @@ Nx 执行高级的源代码分析，以找出工作空间的项目图。
 
 ### 生成器
 
-默认的生成器选项也在`nxjson`中配置。
+默认的生成器选项也在`nx.json`中配置。
 例如，下面的代码告诉 Nx 在创建新库时总是传递`--buildable=true`。
 
 ```json
@@ -324,7 +324,7 @@ Nx 执行高级的源代码分析，以找出工作空间的项目图。
 > 任务是对目标的调用。
 
 当你运行`nx test`, `nx build`, `nx run-many`, `nx affected`,等等时，会调用任务运行器。
-默认情况下使用名为“default”的任务运行器。
+默认情况下使用名为`default`的任务运行器。
 指定一个不同的`nx run-many --target=build --all --runner=another`。
 
 任务运行程序可以接受不同的选项。
@@ -357,7 +357,7 @@ Nx 执行高级的源代码分析，以找出工作空间的项目图。
 }
 ```
 
-你可以在`nxjson`中配置`parallel`，但你也可以在终端中传递它们 `nx run-many --target=test --parallel=5`.
+你可以在`nx.json`中配置`parallel`，但你也可以在终端中传递它们 `nx run-many --target=test --parallel=5`.
 
 ## .nxignore
 

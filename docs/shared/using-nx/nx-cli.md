@@ -1,6 +1,6 @@
 # Nx CLI
 
-## Why use the Nx CLI?
+## 为什么使用 Nx 命令行?
 
 The Nx CLI isn't like most command lines that accomplishes a predefined task. Nx can be configured to work with
 different tools and even different languages.
@@ -13,7 +13,7 @@ Nx allows you to break up your codebase into different **projects**. The Nx CLI 
 
 Run the `nx help` command to see a full list of commands in the Nx CLI.
 
-## Acting on Code
+## 作用于代码
 
 The [`nx run` command](/cli/run) executes a target on a single project. For convenience, you can also
 run `nx [target] [project]` which is an alias to `nx run [project]:[target]`.
@@ -48,7 +48,7 @@ runs a target across them. This is more efficient than running all projects ever
 nx affected --target=build
 ```
 
-## Modifying Code
+## 修改代码
 
 The [`nx generate` command](/cli/generate) generates and modifies code.
 
@@ -81,7 +81,7 @@ nx migrate latest # Updates the version of Nx in `package.json` and schedules mi
 nx migrate --run-migrations # Runs the migrations scheduled by the previous command.
 ```
 
-## Understanding the codebase
+## 理解代码库
 
 Nx creates and maintains a project graph between projects based on import statements in your code and uses that
 information to run executors only on the [affected](/cli/affected) projects in a codebase. A visual
@@ -109,7 +109,7 @@ nx list
 nx list @nrwl/react # Lists capabilities in the @nrwl/react plugin
 ```
 
-## Common Environment Variables
+## 常见的环境变量
 
 There are some environment variables that you can set to log additional information from Nx.
 

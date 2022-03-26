@@ -81,15 +81,22 @@ Nx 是智能的，因此它合并内存中的所有文件，使这些迁移和�
 
 `ng update` 尝试一次自动执行迁移。这并不适用于大多数重要的工作区。
 
-- `ng update` doesn't separate updating `package.json` from updating the source code of the repo. It all happens in a single go. This often fails for non-trivial workspaces or for organizations that have a custom npm registry, where you might want to use a different version of a package.
-- `ng update` relies on `peerDependencies` to figure out what needs to be updated. Many third-party plugin don't have `peerDependencies` set correctly.
-- When using `ng update` it is difficult to execute one migration at a time. Sometimes you want to patch things up after executing a migration.
-- When using `ng update` it's not possible to fix almost-working migrations. We do our best but sometimes we don't account for the specifics of a particular workspace.
-- When using `ng update` it's not possible to commit a partially-migrated repo. Migration can take days for a large repo.
-- When using `ng update` it's not possible to rerun some of the migrations multiple times. This is required because you can rebase the branch multiple times while migrating.
+- `ng update`没有将更新`package.json`与更新 repo 的源代码分开。
+  这一切都是一蹴而就。
+  对于重要的工作区或拥有自定义 npm 注册表的组织来说，这通常会失败，因为在这些组织中，你可能想要使用一个包的不同版本。
+- `ng update`依赖于`peerDependencies`来确定需要更新的内容。
+  许多第三方插件没有正确设置“peerDependencies”。
+- 当使用`ng update`时，很难一次执行一个迁移。有时候，您想在执行迁移之后修补一些东西。
+- 当使用`ng update`时，不可能修复几乎正常运行的迁移。我们尽自己最大的努力，但有时我们不考虑特定工作空间的细节。
+- 当使用`ng update`时，不可能提交一个部分迁移的回购。大规模回购可能需要几天时间。
+- 当使用`ng update`时，不可能多次重新运行一些迁移。这是必需的，因为您可以在迁移过程中多次重基分支。
 
-The Nx core team have gained a lot of experience migrating large workspaces over the last 5 years, and `nx migrate` has been consistently a lot more reliable and easier to use. It has also been a lot easier to implement migrations that work with `nx migrate` comparing to `ng update`. As a result, folks building React and Node applications with Nx have had better experience migrating because Angular folks use `ng update` out of habit, instead of using the command that works better.
+在过去的 5 年里，Nx 的核心团队已经获得了大量迁移大型工作区的经验，而且“Nx 迁移”一直以来都更加可靠和易于使用。
+与`ng update`相比，使用`ng migrate`实现迁移也容易得多。
+因此，使用 Nx 构建 React 和 Node 应用的人在迁移过程中会有更好的体验，因为 Angular 的人会出于习惯使用“ng update”，而不是使用效果更好的命令。
 
-**从 Nx 11 开始, you can migrate workspaces only using `nx migrate`**. To reiterate: `nx migrate` runs the migrations written by the Angular CLI team the same way `ng update` runs them. So everything should still work. You just get more control over how it works.
+**从 Nx 11 开始, 你可以只使用`nx migrate`来迁移工作空间。**.
+重申一下:`ng migrate`运行 Angular CLI 团队编写的迁移，方式和`ng update`运行它们的方式是一样的。
+所以一切都应该是正常的。你可以更好地控制它的工作方式。
 
-If you still want to run `ng update`, you can do it as follows: `FORCE_NG_UPDATE=true nx update mypackage`.
+如果你仍然想运行`ng update`，你可以这样做: `FORCE_NG_UPDATE=true nx update mypackage`.

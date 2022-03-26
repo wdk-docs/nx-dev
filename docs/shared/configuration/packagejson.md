@@ -2,14 +2,15 @@
 
 每个 Nx 工作区中有两种主要的配置类型: [项目配置](#project-configuration) 和 [Nx CLI 全局配置](#cli-configuration).
 
-Projects can be configured in `package.json` (if you use npm scripts and not Nx executors) and `project.json` (if you
-use Nx executors). Both `package.json` and `project.json` files are located in each project's folder. Nx merges the two
-files to get each project's configuration. This guide covers the `package.json` case.
+项目可以在`packagejson`(如果你使用 npm 脚本而不是 Nx executor)和`projectjson`(如果你使用 Nx executor)中配置。
+`packagejson`和`projectjson`文件都位于每个项目的文件夹中。
+Nx 合并这两个文件以获得每个项目的配置。
+本指南介绍了`packagejson`的情况。
 
 ## 项目配置
 
-Every npm script defined in `package.json` is a target you can invoke via Nx. For instance, if your project has the
-following `package.json`:
+在`packagejson`中定义的每个 npm 脚本都是你可以通过 Nx 调用的目标。
+例如，如果你的项目有以下`packagejson`:
 
 ```jsonc
 {
@@ -21,9 +22,9 @@ following `package.json`:
 }
 ```
 
-you can invoke `nx build mylib` or `nx test mylib` without any extra configuration.
+你可以调用`nx build mylib`或`nx test mylib`，而不需要任何额外的配置。
 
-You can add Nx-specific configuration as follows:
+可以通过如下方式添加 nx 相关的配置:
 
 ```jsonc
 {
@@ -57,33 +58,34 @@ You can add Nx-specific configuration as follows:
 
 ### 输出
 
-`"outputs": ["dist/libs/mylib"]` tells Nx where the `build` target is going to create file artifacts. The provided value
-is actually the default, so we can omit it in this case. `"outputs": []` tells Nx that the `test` target doesn't create
-any artifacts on disk.
+`"outputs": ["dist/libs/mylib"]`告诉 Nx `build`目标将在哪里创建文件构件。
+所提供的值实际上是默认值，因此在本例中可以省略它。
+`"outputs":[]`告诉 Nx `test`目标不会在磁盘上创建任何工件。
 
-This configuration is usually not needed. Nx comes with reasonable defaults (imported in `nx.json`) which implement the
-configuration above.
+通常不需要这种配置。
+Nx 提供了合理的默认值(在`nx.json`中导入)，实现了上面的配置。
 
 ### dependsOn
 
-Targets can depend on other targets.
+目标可以依赖于其他目标。
 
-A common scenario is having to build dependencies of a project first before building the project. This is what
-the `dependsOn` property of the `build` target configures. It tells Nx that before it can build `mylib` it needs to make
-sure that `mylib`'s dependencies are built as well. This doesn't mean Nx is going to rerun those builds. If the right
-artifacts are already in the right place, Nx will do nothing. If they aren't in the right place, but they are available
-in the cache, Nx will retrieve them from the cache.
+一个常见的场景是在构建项目之前必须首先构建项目的依赖项。
+这就是`build`目标配置的`dependsOn`属性。
+它告诉 Nx，在构建`mylib`之前，它需要确保`mylib`的依赖项也被构建。
+这并不意味着 Nx 将重新运行这些构建。
+如果正确的工件已经在正确的位置，Nx 将什么都不做。
+如果它们不在正确的位置，但在缓存中可用，Nx 将从缓存中检索它们。
 
-Another common scenario is for a target to depend on another target of the same project. For instance, `dependsOn` of
-the `test` target tells Nx that before it can test `mylib` it needs to make sure that `mylib` is built, which will
-result in `mylib`'s dependencies being built as well.
+另一个常见的场景是目标依赖于同一项目的另一个目标。
+例如，`test`目标的`dependsOn`告诉 Nx，在测试`mylib`之前，它需要确保`mylib`已经构建好，这将
+结果 mylib 的依赖也被构建了。
 
-This configuration is usually not needed. Nx comes with reasonable defaults (imported in `nx.json`) which implement the
-configuration above.
+通常不需要这种配置。
+Nx 提供了合理的默认值(在`nx.json`中导入)，实现了上面的配置。
 
 ### 标签
 
-You can annotate your projects with `tags` as follows:
+你可以用`tags`来注释你的项目，如下所示:
 
 ```jsonc
 {
@@ -94,12 +96,12 @@ You can annotate your projects with `tags` as follows:
 }
 ```
 
-You can [configure lint rules using these tags](/structure/monorepo-tags) to, for instance, ensure that libraries belonging to `myteam` are not depended on by libraries belong to `theirteam`.
+例如，你可以[使用这些标签配置 lint 规则](/structure/monorepo-tags)来确保属于`myteam`的库不依赖于属于`theirteam`的库。
 
 ### implicitDependencies
 
-Nx uses powerful source-code analysis to figure out your workspace's project graph. Some dependencies cannot be deduced
-statically, so you can set them manually like this:
+Nx 使用强大的源代码分析来找出工作空间的项目图。
+有些依赖项不能被静态地推导出来，所以你可以像这样手动设置它们:
 
 ```jsonc
 {
@@ -110,7 +112,7 @@ statically, so you can set them manually like this:
 }
 ```
 
-You can also remove a dependency as follows:
+你也可以移除依赖如下:
 
 ```jsonc
 {
@@ -123,8 +125,8 @@ You can also remove a dependency as follows:
 
 ### 忽略项目
 
-Nx will add every project with a `package.json` file in it to its project graph. If you want to ignore a particular
-project, add the following to its `package.json`:
+Nx 会将每个带有“packagejson”文件的项目添加到项目图中。
+如果你想忽略一个特定的项目，在它的`packagejson`中添加以下内容:
 
 ```jsonc
 {
@@ -137,7 +139,8 @@ project, add the following to its `package.json`:
 
 ### 工作空间 json
 
-The `workspace.json` file in the root directory is optional. It's used if you want to list the projects in your workspace explicitly instead of Nx scanning the file tree for all `project.json` and `package.json` files that match the globs specified in the `workspaces` property of the root `package.json`.
+根目录中的“workspacejson”文件是可选的。
+如果你想在你的工作空间中显式地列出项目，而不是 Nx 扫描所有的`projectjson`和`packagejson`文件树，以匹配在根`packagejson`的`workspace`属性中指定的 globs。
 
 ```json
 {
@@ -148,14 +151,15 @@ The `workspace.json` file in the root directory is optional. It's used if you wa
 }
 ```
 
-- `"version": 2` tells Nx that we are using Nx's format for the `workspace.json` file.
-- `projects` is a map of project names to their locations.
+- `"version": 2`告诉 Nx 我们正在使用 Nx 的格式来创建 workspacejson 文件。
+- `projects`是一个项目名称到其位置的映射。
 
 ## CLI 配置
 
-The `nx.json` file configures the Nx CLI and project defaults.
+“nxjson”文件用于配置 Nx 命令行和项目默认值。
 
-The following is an expanded version showing all options. Your `nx.json` will likely be much shorter.
+下面是显示所有选项的扩展版本。
+您的“nxjson”可能会短得多。
 
 ```json
 {
@@ -205,17 +209,17 @@ The following is an expanded version showing all options. Your `nx.json` will li
 
 ### NPM Scope
 
-Tells Nx what prefix to use when generating library imports.
+告诉 Nx 在生成库导入时使用什么前缀。
 
 ### 影响
 
-Tells Nx which branch and HEAD to use when calculating affected projects.
+告诉 Nx 在计算受影响的项目时使用哪个分支和 HEAD。
 
-- `defaultBase` defines the default base branch, defaulted to `main`.
+- `defaultBase`定义了默认的基本分支，默认为`main`。
 
 ### 工作空间布局
 
-You can add a `workspaceLayout` property to modify where libraries and apps are located.
+你可以添加一个`workspaceLayout`属性来修改库和应用程序的位置。
 
 ```json
 {
@@ -226,14 +230,15 @@ You can add a `workspaceLayout` property to modify where libraries and apps are 
 }
 ```
 
-These settings would store apps in `/demos/` and libraries in `/packages/`. The paths specified are relative to the
-workspace root.
+这些设置会将应用存储在`/demos/`中，而将库存储在`/packages/`中。
+指定的路径是相对于工作区根的。
 
 ### 文件和隐式依赖关系
 
-Nx performs advanced source-code analysis to figure out the project graph of the workspace. So when you make a change,
-Nx can deduce what can be broken by this change. Some dependencies between projects and shared files cannot be inferred
-statically. You can configure those using `implicitDependencies`.
+Nx 执行高级的源代码分析，以找出工作空间的项目图。
+因此，当您进行更改时，Nx 可以推断出该更改会破坏什么。
+项目和共享文件之间的一些依赖关系不能被静态推断。
+你可以使用`implicitDependencies`来配置它们。
 
 ```json
 {
@@ -254,23 +259,22 @@ statically. You can configure those using `implicitDependencies`.
 }
 ```
 
-In the example above:
+在上面的例子中:
 
-- Changing `workspace.json` affects every project.
-- Changing the `dependencies` property in `package.json` affects every project.
-- Changing the `mypackage` property in `package.json` only affects `mylib`.
-- Changing any of the custom check `scripts` in `package.json` affects every project.
-- Changing `globalFile` only affects `myapp`.
-- Changing any CSS file inside the `styles` directory only affects `myapp`.
+- 更改“workspacejson”会影响到每个项目。
+- 改变`packagejson`中的`dependencies`属性会影响到每个项目。
+- 更改`packagejson`中的`mypackage`属性只会影响`mylib`。
+- 更改`packagejson`中的任何自定义检查'脚本'都会影响到每个项目。
+- 更改`globalFile`只影响`myapp`。
+- 更改`styles`目录中的任何 CSS 文件只会影响`myapp`。
 
 ### 目标的依赖关系
 
-Targets can depend on other targets. A common scenario is having to build dependencies of a project first before
-building the project. The `dependsOn` property in `package.json` can be used to define the list of dependencies of an
-individual target.
+目标可以依赖于其他目标。
+一个常见的场景是在构建项目之前必须首先构建项目的依赖项。
+`packagejson`中的`dependsOn`属性可以用来定义单个目标的依赖项列表。
 
-Often the same `dependsOn` configuration has to be defined for every project in the repo, and that's when
-defining `targetDependencies` in `nx.json` is helpful.
+通常在 repo 中，每个项目都必须定义相同的 dependsOn 配置，这就是在`nxjson`中定义`targetDependencies`是有帮助的。
 
 ```json
 {
@@ -285,13 +289,12 @@ defining `targetDependencies` in `nx.json` is helpful.
 }
 ```
 
-The configuration above is identical to adding `{"dependsOn": [{"target": "build", "projects": "dependencies"]}` to
-every build target of every project.
+上面的配置类似于向每个项目的每个构建目标添加`{"dependsOn": [{"target": "build", "projects": "dependencies"]}`。
 
 ### CLI 项目
 
-The following command generates a new library: `nx g @nrwl/js:lib mylib`. After setting the `defaultCollection`property,
-the lib is generated without mentioning the plugin name: `nx g lib mylib`.
+使用如下命令生成一个新的库:`nx g @nrwl/js:lib mylib`。
+在设置了`defaultCollection`属性后，lib 会在没有提及插件名的情况下生成:`nx g lib mylib`。
 
 ```json
 {
@@ -301,10 +304,10 @@ the lib is generated without mentioning the plugin name: `nx g lib mylib`.
 }
 ```
 
-### Generators
+### 生成器
 
-Default generator options are configured in `nx.json` as well. For instance, the following tells Nx to always
-pass `--buildable=true` when creating new libraries.
+默认的生成器选项也在`nxjson`中配置。
+例如，下面的代码告诉 Nx 在创建新库时总是传递`--buildable=true`。
 
 ```json
 {
@@ -318,29 +321,27 @@ pass `--buildable=true` when creating new libraries.
 
 ### 运行任务选项
 
-> A task is an invocation of a target.
+> 任务是对目标的调用。
 
-Tasks runners are invoked when you run `nx test`, `nx build`, `nx run-many`, `nx affected`, and so on. The tasks runner
-named "default" is used by default. Specify a different one like this `nx run-many --target=build --all --runner=another`.
+当你运行`nx test`, `nx build`, `nx run-many`, `nx affected`,等等时，会调用任务运行器。
+默认情况下使用名为“default”的任务运行器。
+指定一个不同的`nx run-many --target=build --all --runner=another`。
 
-Tasks runners can accept different options. The following are the options supported
-by `"@nrwl/workspace/tasks-runners"` and `"@nrwl/nx-cloud"`.
+任务运行程序可以接受不同的选项。
+以下是`"@nrwl/workspace/tasks-runners"` and `"@nrwl/nx-cloud"`支持的选项。
 
-- `cacheableOperations` defines the list of targets/operations that are cached by Nx.
-- `parallel` defines the max number of targets ran in parallel (in older versions of Nx you had to
-  pass `--parallel --maxParallel=3` instead of `--parallel=3`).
-- `captureStderr` defines whether the cache captures stderr or just stdout.
-- `skipNxCache` defines whether the Nx Cache should be skipped. Defaults to `false`.
-- `cacheDirectory` defines where the local cache is stored, which is `node_modules/.cache/nx` by default.
-- `encryptionKey` (when using `"@nrwl/nx-cloud"` only) defines an encryption key to support end-to-end encryption of
-  your cloud cache. You may also provide an environment variable with the key `NX_CLOUD_ENCRYPTION_KEY` that contains an
-  encryption key as its value. The Nx Cloud task runner normalizes the key length, so any length of key is acceptable.
-- `runtimeCacheInputs` defines the list of commands that are run by the runner to include into the computation hash
-  value.
-- `selectivelyHashTsConfig` only hash the path mapping of the active project in the `tsconfig.base.json` (e.g.,
-  adding/removing projects doesn't affect the hash of existing projects). Defaults to `false`
+- `cacheableOperations` 定义了 Nx 缓存的目标/操作列表。
+- `parallel` 定义了并行运行的最大目标数(在旧版本的 Nx 中，你必须传递`--parallel --maxParallel=3`而不是`--parallel=3`)。
+- `captureStderr` 定义缓存是捕获 stderr 还是 stdout。
+- `skipNxCache` 定义是否应该跳过 Nx 缓存。默认为 `false`.
+- `cacheDirectory` 定义本地缓存的存储位置，默认 `node_modules/.cache/nx`。
+- `encryptionKey` (当只使用`"@nrwl/nx-cloud"`时)定义了一个加密密钥来支持云缓存的端到端加密。
+  您还可以提供一个带有密钥`NX_CLOUD_ENCRYPTION_KEY`的环境变量，该密钥包含一个加密密钥作为其值。
+  Nx Cloud 任务运行程序对密钥长度进行规范化，因此任何密钥长度都是可以接受的。
+- `runtimeCacheInputs` 定义运行程序要包含到计算哈希值中运行的命令列表。
+- `selectivelyHashTsConfig` 只在`tsconfig.base.json`中散列活动项目的路径映射(例如，添加/删除项目不会影响现有项目的散列)。默认为 `false`
 
-`runtimeCacheInputs` are set as follows:
+`runtimeCacheInputs` 设置如下:
 
 ```json
 {
@@ -356,18 +357,16 @@ by `"@nrwl/workspace/tasks-runners"` and `"@nrwl/nx-cloud"`.
 }
 ```
 
-You can configure `parallel` in `nx.json`, but you can also pass them in the
-terminal `nx run-many --target=test --parallel=5`.
+你可以在`nxjson`中配置`parallel`，但你也可以在终端中传递它们 `nx run-many --target=test --parallel=5`.
 
 ## .nxignore
 
-You may optionally add an `.nxignore` file to the root. This file is used to specify files in your workspace that should
-be completely ignored by Nx.
+你可以选择在根目录中添加一个`.nxignore`文件。
+这个文件用于指定工作空间中应该被 Nx 完全忽略的文件。
 
-The syntax is the same as
-a [`.gitignore` file](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring).
+语法与[`.gitignore`文件](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring)相同。
 
-**When a file is specified in the `.nxignore` file:**
+**当一个文件被指定在`.nxignore`文件:**
 
-1. Changes to that file are not taken into account in the `affected` calculations.
-2. Even if the file is outside an app or library, `nx workspace-lint` won't warn about it.
+1.  对该文件的更改不会在`affected`计算中被考虑在内。
+2.  即使文件在应用程序或库之外，`nx workspace-lint`也不会发出警告。
